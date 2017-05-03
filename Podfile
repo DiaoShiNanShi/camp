@@ -4,6 +4,7 @@ use_frameworks!
 target ‘camp’ do
     pod 'AFNetworking'
     pod 'Masonry'
+    pod 'JSONModel'
 end
 
 post_install do |installer|

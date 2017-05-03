@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C8DBE601EB970A1007C55F1 /* CSNetWorkIngManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE5E1EB970A1007C55F1 /* CSNetWorkIngManager.m */; };
+		6C8DBE691EB97D60007C55F1 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE681EB97D60007C55F1 /* UserModel.m */; };
+		6C8DBE6F1EB98D2E007C55F1 /* MainTabBarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE6E1EB98D2E007C55F1 /* MainTabBarControl.m */; };
 		6CB6A4ED1EB834B400FD9895 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB6A4EC1EB834B400FD9895 /* main.m */; };
 		6CB6A5091EB834B400FD9895 /* campTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB6A5081EB834B400FD9895 /* campTests.m */; };
 		6CB6A5141EB834B400FD9895 /* campUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB6A5131EB834B400FD9895 /* campUITests.m */; };
@@ -50,6 +53,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C8DBE5E1EB970A1007C55F1 /* CSNetWorkIngManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNetWorkIngManager.m; sourceTree = "<group>"; };
+		6C8DBE5F1EB970A1007C55F1 /* CSNetWorkIngManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNetWorkIngManager.h; sourceTree = "<group>"; };
+		6C8DBE641EB971D2007C55F1 /* api_Url.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = api_Url.h; sourceTree = "<group>"; };
+		6C8DBE671EB97D60007C55F1 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		6C8DBE681EB97D60007C55F1 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		6C8DBE6A1EB9807C007C55F1 /* mac_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mac_Model.h; sourceTree = "<group>"; };
+		6C8DBE6B1EB98574007C55F1 /* app_Geneal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = app_Geneal.h; sourceTree = "<group>"; };
+		6C8DBE6D1EB98D2E007C55F1 /* MainTabBarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarControl.h; sourceTree = "<group>"; };
+		6C8DBE6E1EB98D2E007C55F1 /* MainTabBarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarControl.m; sourceTree = "<group>"; };
 		6CB6A4E81EB834B400FD9895 /* camp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = camp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB6A4EC1EB834B400FD9895 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6CB6A5041EB834B400FD9895 /* campTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = campTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +145,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6C8DBE651EB97CD6007C55F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C8DBE661EB97D1D007C55F1 /* UserInfo */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C8DBE661EB97D1D007C55F1 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				6C8DBE671EB97D60007C55F1 /* UserModel.h */,
+				6C8DBE681EB97D60007C55F1 /* UserModel.m */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		6C8DBE6C1EB98C40007C55F1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6C8DBE6D1EB98D2E007C55F1 /* MainTabBarControl.h */,
+				6C8DBE6E1EB98D2E007C55F1 /* MainTabBarControl.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		6CB6A4DF1EB834B400FD9895 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +236,8 @@
 		6CD3EC401EB841520037564E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				6C8DBE5E1EB970A1007C55F1 /* CSNetWorkIngManager.m */,
+				6C8DBE5F1EB970A1007C55F1 /* CSNetWorkIngManager.h */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -205,6 +245,7 @@
 		6CD3EC411EB841880037564E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6C8DBE651EB97CD6007C55F1 /* Model */,
 				6CD3EC541EB854130037564E /* Control */,
 				6CD3EC4E1EB8434F0037564E /* storyboad */,
 			);
@@ -235,6 +276,9 @@
 			isa = PBXGroup;
 			children = (
 				6CD3EC531EB853300037564E /* PrefixHeader.pch */,
+				6C8DBE641EB971D2007C55F1 /* api_Url.h */,
+				6C8DBE6A1EB9807C007C55F1 /* mac_Model.h */,
+				6C8DBE6B1EB98574007C55F1 /* app_Geneal.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -252,6 +296,7 @@
 		6CD3EC541EB854130037564E /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				6C8DBE6C1EB98C40007C55F1 /* Main */,
 				6CD3EC551EB8544F0037564E /* Login */,
 			);
 			path = Control;
@@ -570,10 +615,13 @@
 				6CD3EC451EB841EC0037564E /* AppDelegate.m in Sources */,
 				6CD3EC9A1EB87ED60037564E /* CLLockVC.m in Sources */,
 				6CD3EC5A1EB85DBB0037564E /* LoginController.m in Sources */,
+				6C8DBE691EB97D60007C55F1 /* UserModel.m in Sources */,
 				6CD3EC5D1EB85FFC0037564E /* camp.xcdatamodeld in Sources */,
 				6CD3EC8D1EB87D940037564E /* CLLockView.m in Sources */,
 				6CB6A4ED1EB834B400FD9895 /* main.m in Sources */,
+				6C8DBE601EB970A1007C55F1 /* CSNetWorkIngManager.m in Sources */,
 				6CD3EC8B1EB87D940037564E /* CLLockLabel.m in Sources */,
+				6C8DBE6F1EB98D2E007C55F1 /* MainTabBarControl.m in Sources */,
 				6CD3EC881EB87D940037564E /* CLLockNavVC.m in Sources */,
 				6CD3EC871EB87D940037564E /* CoreLockConst.m in Sources */,
 				6CD3EC8A1EB87D940037564E /* CLLockItemView.m in Sources */,

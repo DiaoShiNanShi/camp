@@ -17,6 +17,6 @@
 
 - (void)saveContext;
 
-
+- (void)restoreRootViewController:(UIViewController *)rootViewController;
 @end
 

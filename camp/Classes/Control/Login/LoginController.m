@@ -7,8 +7,11 @@
 //
 
 #import "LoginController.h"
-@interface LoginController ()
+#import "MainTabBarControl.h"
 
+@interface LoginController ()
+@property (nonatomic, weak) IBOutlet UITextField *userNameTxt;
+@property (nonatomic, weak) IBOutlet UITextField *passWordTxt;
 @property (nonatomic, weak) IBOutlet UIImageView *checkBox;
 @property (nonatomic, weak) IBOutlet UIButton *checkBoxBtn;
 - (void)Basiclayout;
@@ -27,15 +30,50 @@
 }
 
 - (void)Basiclayout{
-    [self.checkBox setImage:[UIImage imageNamed: self.checkBoxBtn.selected?@"cb_mono_on":@"cb_mono_off"]];
+    [self.checkBox setImage:[UIImage imageNamed: [[persistenceData valueForKey:PD_IsRememberAccount] boolValue]?@"cb_mono_on":@"cb_mono_off"]];
     
+    /* 选中的状态下添加账号 */
 }
 
 #pragma mark - ChecjBoxBtnOnClick
 - (IBAction)ChecjBoxBtnOnClick:(UIButton *)sender {
     
-    [self.checkBox setImage:[UIImage imageNamed:!sender.selected?@"cb_mono_on":@"cb_mono_off"]];
-    sender.selected  =! sender.selected;
+    /*  保存更新 记住账号*/
+    [self.checkBox setImage:[UIImage imageNamed:![[persistenceData valueForKey:PD_IsRememberAccount] boolValue]?@"cb_mono_on":@"cb_mono_off"]];
+    [persistenceData setValue:![[persistenceData valueForKey:PD_IsRememberAccount] boolValue]?@(YES):@(NO) forKey:PD_IsRememberAccount];
+    NSLog(@"%@",[persistenceData valueForKey:PD_IsRememberAccount] );
+}
+
+#pragma mark - Login - 登录
+- (IBAction)CheckLogin:(id)sender{
+    
+    NSString *userName = self.userNameTxt.text;
+    NSString *passWord = self.passWordTxt.text;
+    
+    if(userName.length <= 0 || passWord.length <= 0){
+        NSLog(@"账号或者密码不能为空");
+        return;
+    }
+    
+    NSMutableDictionary *parment = [NSMutableDictionary dictionary];
+    [parment setValue:userName forKey:@"username"];
+    [parment setValue:passWord forKey:@"password"];
+    [parment setValue:@"0" forKey:@"type"];
+    
+    [[CSNetWorkIngManager sharNetWorkManager] Post:Login withCommletionHandler:^(id result, NSError *error) {
+        
+        NSError *err;
+        UserModel *model = [[UserModel alloc] initWithDictionary:result error:&err];
+        /* 模型转换成功 ，保存数据跳转*/
+        
+        MainTabBarControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:KMainTabBarIdentFiler];
+        [KAppDelegate restoreRootViewController:Vc];
+    } withParameters:parment withcompletionHandlerError:^(NSString *code) {
+        NSLog(@"%@",code);
+    }];
+}
+- (void)dealloc{
+    NSLog(@"成功释放控制器 ============ %@",NSStringFromClass([self class]));
 }
 
 
