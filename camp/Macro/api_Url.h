@@ -13,5 +13,6 @@
 
 
 #define         Login                                       @"clientUserLogin.do"
+#define         DataBase                                @"/common/clientStartUp.do"
 
 #endif /* api_Url_h */

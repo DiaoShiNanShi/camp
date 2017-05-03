@@ -10,6 +10,9 @@
 		6C8DBE601EB970A1007C55F1 /* CSNetWorkIngManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE5E1EB970A1007C55F1 /* CSNetWorkIngManager.m */; };
 		6C8DBE691EB97D60007C55F1 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE681EB97D60007C55F1 /* UserModel.m */; };
 		6C8DBE6F1EB98D2E007C55F1 /* MainTabBarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE6E1EB98D2E007C55F1 /* MainTabBarControl.m */; };
+		6C8DBE7B1EB9CEB2007C55F1 /* DataBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE7A1EB9CEB2007C55F1 /* DataBaseModel.m */; };
+		6C8DBE7E1EB9D22B007C55F1 /* gameGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE7D1EB9D22B007C55F1 /* gameGroupModel.m */; };
+		6C8DBE811EB9DD8E007C55F1 /* gameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE801EB9DD8E007C55F1 /* gameModel.m */; };
 		6CB6A4ED1EB834B400FD9895 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB6A4EC1EB834B400FD9895 /* main.m */; };
 		6CB6A5091EB834B400FD9895 /* campTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB6A5081EB834B400FD9895 /* campTests.m */; };
 		6CB6A5141EB834B400FD9895 /* campUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB6A5131EB834B400FD9895 /* campUITests.m */; };
@@ -62,6 +65,12 @@
 		6C8DBE6B1EB98574007C55F1 /* app_Geneal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = app_Geneal.h; sourceTree = "<group>"; };
 		6C8DBE6D1EB98D2E007C55F1 /* MainTabBarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarControl.h; sourceTree = "<group>"; };
 		6C8DBE6E1EB98D2E007C55F1 /* MainTabBarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarControl.m; sourceTree = "<group>"; };
+		6C8DBE791EB9CEB2007C55F1 /* DataBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseModel.h; sourceTree = "<group>"; };
+		6C8DBE7A1EB9CEB2007C55F1 /* DataBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseModel.m; sourceTree = "<group>"; };
+		6C8DBE7C1EB9D22B007C55F1 /* gameGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameGroupModel.h; sourceTree = "<group>"; };
+		6C8DBE7D1EB9D22B007C55F1 /* gameGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameGroupModel.m; sourceTree = "<group>"; };
+		6C8DBE7F1EB9DD8E007C55F1 /* gameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameModel.h; sourceTree = "<group>"; };
+		6C8DBE801EB9DD8E007C55F1 /* gameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameModel.m; sourceTree = "<group>"; };
 		6CB6A4E81EB834B400FD9895 /* camp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = camp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB6A4EC1EB834B400FD9895 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6CB6A5041EB834B400FD9895 /* campTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = campTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +157,7 @@
 		6C8DBE651EB97CD6007C55F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6C8DBE781EB9CE6A007C55F1 /* DataBaseModel */,
 				6C8DBE661EB97D1D007C55F1 /* UserInfo */,
 			);
 			path = Model;
@@ -169,6 +179,19 @@
 				6C8DBE6E1EB98D2E007C55F1 /* MainTabBarControl.m */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		6C8DBE781EB9CE6A007C55F1 /* DataBaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				6C8DBE791EB9CEB2007C55F1 /* DataBaseModel.h */,
+				6C8DBE7A1EB9CEB2007C55F1 /* DataBaseModel.m */,
+				6C8DBE7C1EB9D22B007C55F1 /* gameGroupModel.h */,
+				6C8DBE7D1EB9D22B007C55F1 /* gameGroupModel.m */,
+				6C8DBE7F1EB9DD8E007C55F1 /* gameModel.h */,
+				6C8DBE801EB9DD8E007C55F1 /* gameModel.m */,
+			);
+			path = DataBaseModel;
 			sourceTree = "<group>";
 		};
 		6CB6A4DF1EB834B400FD9895 = {
@@ -612,6 +635,7 @@
 				6CD3EC691EB869510037564E /* CALayer+SetBorder.m in Sources */,
 				6CD3EC961EB87DA60037564E /* NSString+File.m in Sources */,
 				6CD3EC971EB87DA60037564E /* CoreArchive.m in Sources */,
+				6C8DBE7E1EB9D22B007C55F1 /* gameGroupModel.m in Sources */,
 				6CD3EC451EB841EC0037564E /* AppDelegate.m in Sources */,
 				6CD3EC9A1EB87ED60037564E /* CLLockVC.m in Sources */,
 				6CD3EC5A1EB85DBB0037564E /* LoginController.m in Sources */,
@@ -619,10 +643,12 @@
 				6CD3EC5D1EB85FFC0037564E /* camp.xcdatamodeld in Sources */,
 				6CD3EC8D1EB87D940037564E /* CLLockView.m in Sources */,
 				6CB6A4ED1EB834B400FD9895 /* main.m in Sources */,
+				6C8DBE811EB9DD8E007C55F1 /* gameModel.m in Sources */,
 				6C8DBE601EB970A1007C55F1 /* CSNetWorkIngManager.m in Sources */,
 				6CD3EC8B1EB87D940037564E /* CLLockLabel.m in Sources */,
 				6C8DBE6F1EB98D2E007C55F1 /* MainTabBarControl.m in Sources */,
 				6CD3EC881EB87D940037564E /* CLLockNavVC.m in Sources */,
+				6C8DBE7B1EB9CEB2007C55F1 /* DataBaseModel.m in Sources */,
 				6CD3EC871EB87D940037564E /* CoreLockConst.m in Sources */,
 				6CD3EC8A1EB87D940037564E /* CLLockItemView.m in Sources */,
 				6CD3EC8C1EB87D940037564E /* CLLockMainView.m in Sources */,

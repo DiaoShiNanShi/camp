@@ -15,9 +15,12 @@
 
 /* 持久化   数据 */
 #define persistenceData                        [NSUserDefaults standardUserDefaults]
-#define PD_IsRememberAccount        @"isRememberAccount"
 
-
+/* Key */
+#define PD_IsRememberAccount         @"isRememberAccount"
+#define PD_UserInfo                             @"pd_userInfo"
+#define PD_Account                              @"pd_account"
+#define PD_Cookie                                 @"pd_Cookie"
 
 
 /*                   IdentFiler_Control*/

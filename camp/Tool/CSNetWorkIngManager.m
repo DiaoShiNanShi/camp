@@ -60,14 +60,25 @@ static CSNetWorkIngManager *network;
  */
 - (void)Post:(NSString *)url withCommletionHandler:(completionHandler)completionHandler withParameters:(id)parameter withcompletionHandlerError:(completionHandlerError)handlerError
 {
+    NSString *Cookie = [persistenceData valueForKey:PD_Cookie];
+    if(Cookie.length > 0){
+        [self.manager.requestSerializer setValue:Cookie forHTTPHeaderField:@"Cookie"];
+    }
+    
     [self.manager POST:[NSString stringWithFormat:@"%@%@",baseUrl,url] parameters:parameter constructingBodyWithBlock:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+            NSHTTPURLResponse *response_ = (NSHTTPURLResponse *)task.response;
+            NSString *Cookie_ = response_.allHeaderFields[@"Set-Cookie"];
+            if(Cookie_.length > 0){
+                [persistenceData setValue:Cookie_ forKey:PD_Cookie];
+            }
             
             NSError *err;
             NSDictionary *response = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:&err];
             dispatch_async(dispatch_get_main_queue(), ^{
                 if([response[@"reason"] isEqualToString:@"success"]){
-                    completionHandler(response[@"member"],nil);
+                    completionHandler(response,nil);
                 }else{
                     handlerError(response[@"reason"]);
                 }

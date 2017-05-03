@@ -5,6 +5,7 @@ target ‘camp’ do
     pod 'AFNetworking'
     pod 'Masonry'
     pod 'JSONModel'
+    pod 'FMDB'
 end
 
 post_install do |installer|

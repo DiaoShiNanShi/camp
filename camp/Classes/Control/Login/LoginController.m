@@ -9,7 +9,7 @@
 #import "LoginController.h"
 #import "MainTabBarControl.h"
 
-@interface LoginController ()
+@interface LoginController ()<UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField *userNameTxt;
 @property (nonatomic, weak) IBOutlet UITextField *passWordTxt;
 @property (nonatomic, weak) IBOutlet UIImageView *checkBox;
@@ -31,8 +31,9 @@
 
 - (void)Basiclayout{
     [self.checkBox setImage:[UIImage imageNamed: [[persistenceData valueForKey:PD_IsRememberAccount] boolValue]?@"cb_mono_on":@"cb_mono_off"]];
-    
     /* 选中的状态下添加账号 */
+    NSLog(@"%@",[persistenceData valueForKey:PD_Account]);
+    [self.userNameTxt setText:[persistenceData valueForKey:PD_Account]];
 }
 
 #pragma mark - ChecjBoxBtnOnClick
@@ -41,7 +42,13 @@
     /*  保存更新 记住账号*/
     [self.checkBox setImage:[UIImage imageNamed:![[persistenceData valueForKey:PD_IsRememberAccount] boolValue]?@"cb_mono_on":@"cb_mono_off"]];
     [persistenceData setValue:![[persistenceData valueForKey:PD_IsRememberAccount] boolValue]?@(YES):@(NO) forKey:PD_IsRememberAccount];
-    NSLog(@"%@",[persistenceData valueForKey:PD_IsRememberAccount] );
+    [persistenceData setValue:[[persistenceData valueForKey:PD_IsRememberAccount] boolValue]?self.userNameTxt.text:@"" forKey:PD_Account];
+}
+
+#pragma mark - UITextFieldDelegate 编辑结束保存账号
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if(![[persistenceData valueForKey:PD_IsRememberAccount] boolValue]) return;
+    [persistenceData setValue:textField.text forKey:PD_Account];
 }
 
 #pragma mark - Login - 登录
@@ -60,12 +67,13 @@
     [parment setValue:passWord forKey:@"password"];
     [parment setValue:@"0" forKey:@"type"];
     
+    NSLog(@"________________开始登陆..........");
     [[CSNetWorkIngManager sharNetWorkManager] Post:Login withCommletionHandler:^(id result, NSError *error) {
-        
-        NSError *err;
-        UserModel *model = [[UserModel alloc] initWithDictionary:result error:&err];
+    NSLog(@"________________登陆成功..........");
         /* 模型转换成功 ，保存数据跳转*/
-        
+        NSError *err;
+        UserModel *entity = [[UserModel alloc] initWithDictionary:result[@"member"] error:&err];
+        [persistenceData setObject:[NSKeyedArchiver archivedDataWithRootObject:entity] forKey:PD_UserInfo];
         MainTabBarControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:KMainTabBarIdentFiler];
         [KAppDelegate restoreRootViewController:Vc];
     } withParameters:parment withcompletionHandlerError:^(NSString *code) {

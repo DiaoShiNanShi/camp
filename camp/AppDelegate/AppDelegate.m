@@ -17,7 +17,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // 请求页面数据 并归档
+    [self getDataBase];
     return YES;
+}
+-  (void) getDataBase{
+    
+    NSMutableDictionary *parment = [NSMutableDictionary dictionary];
+    [parment setValue:@"CS" forKey:@"plantform"];
+    [parment setValue:@"123456" forKey:@"merID"];
+    [parment setValue:@"" forKey:@"version"];
+    
+    [[CSNetWorkIngManager sharNetWorkManager] Post:DataBase withCommletionHandler:^(id result, NSError *error) {
+        
+        NSError *err;
+        DataBaseModel *model = [[DataBaseModel alloc] initWithDictionary:result error:&err];
+        NSLog(@"%@",model);
+        
+    } withParameters:parment withcompletionHandlerError:^(NSString *code) {
+        NSLog(@"");
+    }];
 }
 
 

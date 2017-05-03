@@ -10,5 +10,8 @@
 #define mac_Model_h
 
 #import "UserModel.h"
+#import "DataBaseModel.h"
+#import "gameGroupModel.h"
+#import "gameModel.h"
 
 #endif /* mac_Model_h */
