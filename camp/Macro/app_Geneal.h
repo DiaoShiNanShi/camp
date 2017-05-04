@@ -20,8 +20,12 @@
 #define PD_IsRememberAccount         @"isRememberAccount"
 #define PD_UserInfo                             @"pd_userInfo"
 #define PD_Account                              @"pd_account"
-#define PD_Cookie                                 @"pd_Cookie"
+#define PD_Cookie                                @"pd_Cookie"
+#define PD_DataBaseModel                @"pd_DataBaseModel"
+#define PD_Version                              @"pd_Version"
 
+/* 获取本地保存的信息 */
+#define LocalDataBaseModelFilePath          [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"dataBaseModel.achive"]
 
 /*                   IdentFiler_Control*/
 #define KMainTabBarIdentFiler                                           @"MainTabBarControlIdentFiler"

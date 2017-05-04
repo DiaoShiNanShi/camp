@@ -43,6 +43,7 @@
     [self.checkBox setImage:[UIImage imageNamed:![[persistenceData valueForKey:PD_IsRememberAccount] boolValue]?@"cb_mono_on":@"cb_mono_off"]];
     [persistenceData setValue:![[persistenceData valueForKey:PD_IsRememberAccount] boolValue]?@(YES):@(NO) forKey:PD_IsRememberAccount];
     [persistenceData setValue:[[persistenceData valueForKey:PD_IsRememberAccount] boolValue]?self.userNameTxt.text:@"" forKey:PD_Account];
+    [persistenceData synchronize];
 }
 
 #pragma mark - UITextFieldDelegate 编辑结束保存账号
@@ -74,6 +75,7 @@
         NSError *err;
         UserModel *entity = [[UserModel alloc] initWithDictionary:result[@"member"] error:&err];
         [persistenceData setObject:[NSKeyedArchiver archivedDataWithRootObject:entity] forKey:PD_UserInfo];
+        [persistenceData synchronize];
         MainTabBarControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:KMainTabBarIdentFiler];
         [KAppDelegate restoreRootViewController:Vc];
     } withParameters:parment withcompletionHandlerError:^(NSString *code) {

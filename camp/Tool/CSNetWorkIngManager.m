@@ -117,7 +117,7 @@ static CSNetWorkIngManager *network;
         _manager = [AFHTTPSessionManager manager];
         AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
         _manager.requestSerializer = requestSerializer;
-        _manager.requestSerializer.timeoutInterval = 10.0;
+        _manager.requestSerializer.timeoutInterval = 30.0;
         
         _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
         _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",nil];

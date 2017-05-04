@@ -23,21 +23,38 @@
     return YES;
 }
 -  (void) getDataBase{
-    
-    NSMutableDictionary *parment = [NSMutableDictionary dictionary];
-    [parment setValue:@"CS" forKey:@"plantform"];
-    [parment setValue:@"123456" forKey:@"merID"];
-    [parment setValue:@"" forKey:@"version"];
-    
-    [[CSNetWorkIngManager sharNetWorkManager] Post:DataBase withCommletionHandler:^(id result, NSError *error) {
+    @try {
+        /* 解档数据 */
+        NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
+        DataBaseModel *dataBase;
+        if(![UnarchiveDataBase isEqual:nil]){
+            dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
+            /* 更新本地保存版本号 */
+            [persistenceData setValue:dataBase.version forKey:PD_Version];
+        }
+        NSMutableDictionary *parment = [NSMutableDictionary dictionary];
+        [parment setValue:@"CS" forKey:@"plantform"];
+        [parment setValue:@"123456" forKey:@"merID"];
+//        [parment setValue:dataBase == nil? @"": dataBase.version forKey:@"version"];
+         [parment setValue: @"" forKey:@"version"];
         
-        NSError *err;
-        DataBaseModel *model = [[DataBaseModel alloc] initWithDictionary:result error:&err];
-        NSLog(@"%@",model);
-        
-    } withParameters:parment withcompletionHandlerError:^(NSString *code) {
-        NSLog(@"");
-    }];
+        [[CSNetWorkIngManager sharNetWorkManager] Post:DataBase withCommletionHandler:^(id result, NSError *error) {
+            /* 如果版本号相同 则不需要进行下一步 */
+//            if([[persistenceData valueForKey:PD_Version] isEqualToString:result[@"version"]]){
+//                return ;
+//            }
+            NSError *err;
+            DataBaseModel *model = [[DataBaseModel alloc] initWithDictionary:result error:&err];
+            
+            /* 写入到文件中 */
+            NSData *baseData = [NSKeyedArchiver archivedDataWithRootObject:model];
+            [baseData writeToFile:LocalDataBaseModelFilePath atomically:YES];
+        } withParameters:parment withcompletionHandlerError:^(NSString *code) {
+            NSLog(@"");
+        }];
+    } @catch (NSException *exception) {
+        NSLog(@"%@",exception.reason);
+    }
 }
 
 

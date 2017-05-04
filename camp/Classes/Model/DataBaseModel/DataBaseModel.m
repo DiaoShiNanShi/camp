@@ -24,13 +24,35 @@
         }
     }else if([key isEqualToString:@"games"]){
         
-        NSMutableDictionary <NSString *,NSArray<gameModel *> *> *game_ = [NSMutableDictionary dictionary];
-        [value enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-             NSLog(@"key = %@ and obj = %@", key, obj);
-        }];
+        self.games = [NSDictionary dictionaryWithDictionary:value];
+//        [value enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+//            NSMutableArray<gameModel *> *gameArray_ = [NSMutableArray arrayWithCapacity:[obj count]];
+//            for (NSDictionary *item in obj) {
+//                gameModel *model_ = [[gameModel alloc] initWithDictionary:item error:nil];
+//                [gameArray_ addObject:model_];
+//            }
+//            
+//            [self.games setValue:gameArray_ forKey:key];
+//        }];
     }else{
         [super setValue:value forKey:key];
     }
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:_gameGroups forKey:@"gameGroups"];
+    [aCoder encodeObject:_games forKey:@"games"];
+    [aCoder encodeObject:_version forKey:@"version"];
+}
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super init]) {
+        self.gameGroups = [aDecoder decodeObjectForKey:@"gameGroups"];
+        self.games = [aDecoder decodeObjectForKey:@"games"];
+        self.version = [aDecoder decodeObjectForKey:@"version"];
+    }
+    
+    return self;
 }
 
 @end

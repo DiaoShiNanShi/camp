@@ -11,12 +11,14 @@
 
 @class gameGroupModel;
 @class gameModel;
-@interface DataBaseModel : JSONModel
+@interface DataBaseModel : JSONModel<NSCoding>
 
 /* 游戏分组 */
 @property (nonatomic, strong) NSArray<gameGroupModel *> *gameGroups;
 
 /* 所有游戏*/
-@property (nonatomic, strong) NSDictionary<NSString *,NSArray<gameModel *> *> *games;
+@property (nonatomic, strong) NSDictionary *games;
 
+/* 最新版本号 */
+@property (nonatomic, copy) NSString *version;
 @end

@@ -35,6 +35,9 @@
 		6CD3EC961EB87DA60037564E /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC911EB87DA60037564E /* NSString+File.m */; };
 		6CD3EC971EB87DA60037564E /* CoreArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC931EB87DA60037564E /* CoreArchive.m */; };
 		6CD3EC9A1EB87ED60037564E /* CLLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC991EB87ED60037564E /* CLLockVC.m */; };
+		6CFD166C1EBAC21900D9C9E1 /* CampBaseControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD166B1EBAC21900D9C9E1 /* CampBaseControl.m */; };
+		6CFD166F1EBAC27500D9C9E1 /* ElectronicGameControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD166E1EBAC27500D9C9E1 /* ElectronicGameControl.m */; };
+		6CFD16791EBADBA300D9C9E1 /* GameElectronicMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD16781EBADBA300D9C9E1 /* GameElectronicMenu.m */; };
 		D67C1E7F4C1F20852754170E /* Pods_camp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91480066AAC9FC87F06E853 /* Pods_camp.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +117,12 @@
 		6CD3EC951EB87DA60037564E /* CoreConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreConst.h; sourceTree = "<group>"; };
 		6CD3EC981EB87ED60037564E /* CLLockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLockVC.h; sourceTree = "<group>"; };
 		6CD3EC991EB87ED60037564E /* CLLockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLockVC.m; sourceTree = "<group>"; };
+		6CFD166A1EBAC21900D9C9E1 /* CampBaseControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampBaseControl.h; sourceTree = "<group>"; };
+		6CFD166B1EBAC21900D9C9E1 /* CampBaseControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampBaseControl.m; sourceTree = "<group>"; };
+		6CFD166D1EBAC27500D9C9E1 /* ElectronicGameControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronicGameControl.h; sourceTree = "<group>"; };
+		6CFD166E1EBAC27500D9C9E1 /* ElectronicGameControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronicGameControl.m; sourceTree = "<group>"; };
+		6CFD16771EBADBA300D9C9E1 /* GameElectronicMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameElectronicMenu.h; sourceTree = "<group>"; };
+		6CFD16781EBADBA300D9C9E1 /* GameElectronicMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameElectronicMenu.m; sourceTree = "<group>"; };
 		BB81A0DE3CE27D4FC81CED53 /* Pods-camp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp/Pods-camp.release.xcconfig"; sourceTree = "<group>"; };
 		E91480066AAC9FC87F06E853 /* Pods_camp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_camp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFA61262C9A4A789AA407EE /* Pods-camp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp/Pods-camp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +277,7 @@
 		6CD3EC411EB841880037564E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6CFD16701EBAD9B000D9C9E1 /* View */,
 				6C8DBE651EB97CD6007C55F1 /* Model */,
 				6CD3EC541EB854130037564E /* Control */,
 				6CD3EC4E1EB8434F0037564E /* storyboad */,
@@ -319,6 +329,8 @@
 		6CD3EC541EB854130037564E /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				6CFD16691EBAC1ED00D9C9E1 /* BaseControl */,
+				6CFD16681EBAC1D100D9C9E1 /* ElectronicGame */,
 				6C8DBE6C1EB98C40007C55F1 /* Main */,
 				6CD3EC551EB8544F0037564E /* Login */,
 			);
@@ -435,6 +447,41 @@
 				6CD3EC951EB87DA60037564E /* CoreConst.h */,
 			);
 			path = CoreExtend;
+			sourceTree = "<group>";
+		};
+		6CFD16681EBAC1D100D9C9E1 /* ElectronicGame */ = {
+			isa = PBXGroup;
+			children = (
+				6CFD166D1EBAC27500D9C9E1 /* ElectronicGameControl.h */,
+				6CFD166E1EBAC27500D9C9E1 /* ElectronicGameControl.m */,
+			);
+			path = ElectronicGame;
+			sourceTree = "<group>";
+		};
+		6CFD16691EBAC1ED00D9C9E1 /* BaseControl */ = {
+			isa = PBXGroup;
+			children = (
+				6CFD166A1EBAC21900D9C9E1 /* CampBaseControl.h */,
+				6CFD166B1EBAC21900D9C9E1 /* CampBaseControl.m */,
+			);
+			path = BaseControl;
+			sourceTree = "<group>";
+		};
+		6CFD16701EBAD9B000D9C9E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6CFD16711EBAD9D400D9C9E1 /* ElectronicGame */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6CFD16711EBAD9D400D9C9E1 /* ElectronicGame */ = {
+			isa = PBXGroup;
+			children = (
+				6CFD16771EBADBA300D9C9E1 /* GameElectronicMenu.h */,
+				6CFD16781EBADBA300D9C9E1 /* GameElectronicMenu.m */,
+			);
+			path = ElectronicGame;
 			sourceTree = "<group>";
 		};
 		CA60E65A604DFE1059E482DE /* Frameworks */ = {
@@ -635,10 +682,12 @@
 				6CD3EC691EB869510037564E /* CALayer+SetBorder.m in Sources */,
 				6CD3EC961EB87DA60037564E /* NSString+File.m in Sources */,
 				6CD3EC971EB87DA60037564E /* CoreArchive.m in Sources */,
+				6CFD166F1EBAC27500D9C9E1 /* ElectronicGameControl.m in Sources */,
 				6C8DBE7E1EB9D22B007C55F1 /* gameGroupModel.m in Sources */,
 				6CD3EC451EB841EC0037564E /* AppDelegate.m in Sources */,
 				6CD3EC9A1EB87ED60037564E /* CLLockVC.m in Sources */,
 				6CD3EC5A1EB85DBB0037564E /* LoginController.m in Sources */,
+				6CFD16791EBADBA300D9C9E1 /* GameElectronicMenu.m in Sources */,
 				6C8DBE691EB97D60007C55F1 /* UserModel.m in Sources */,
 				6CD3EC5D1EB85FFC0037564E /* camp.xcdatamodeld in Sources */,
 				6CD3EC8D1EB87D940037564E /* CLLockView.m in Sources */,
@@ -646,6 +695,7 @@
 				6C8DBE811EB9DD8E007C55F1 /* gameModel.m in Sources */,
 				6C8DBE601EB970A1007C55F1 /* CSNetWorkIngManager.m in Sources */,
 				6CD3EC8B1EB87D940037564E /* CLLockLabel.m in Sources */,
+				6CFD166C1EBAC21900D9C9E1 /* CampBaseControl.m in Sources */,
 				6C8DBE6F1EB98D2E007C55F1 /* MainTabBarControl.m in Sources */,
 				6CD3EC881EB87D940037564E /* CLLockNavVC.m in Sources */,
 				6C8DBE7B1EB9CEB2007C55F1 /* DataBaseModel.m in Sources */,
