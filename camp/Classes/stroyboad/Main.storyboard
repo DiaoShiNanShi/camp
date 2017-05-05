@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="W6Q-LE-mn0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4JL-ZJ-wqO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -204,7 +204,7 @@
         <!--真人视讯-->
         <scene sceneID="DdI-3b-Zoo">
             <objects>
-                <viewController id="YuC-m9-oTB" sceneMemberID="viewController">
+                <viewController id="YuC-m9-oTB" customClass="LiveVideoControl" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BVo-eD-RFc"/>
                         <viewControllerLayoutGuide type="bottom" id="pxM-ss-0Qv"/>
@@ -212,13 +212,57 @@
                     <view key="view" contentMode="scaleToFill" id="gP0-oJ-qNn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvB-1y-D1i">
+                                <rect key="frame" x="143.5" y="514" width="87" height="30"/>
+                                <color key="backgroundColor" red="0.003213443560525775" green="0.28970059752464294" blue="0.99846142530441284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="进入游戏">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="OpenGamePopContentView:" destination="YuC-m9-oTB" eventType="touchUpInside" id="s5L-Fc-ok5"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="i2v-N8-Bz6">
+                                <rect key="frame" x="144" y="551" width="87" height="37"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kI7-Gv-yUH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YuC-m9-oTB" id="2Ek-ux-49k"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i2v-N8-Bz6" firstAttribute="width" secondItem="CvB-1y-D1i" secondAttribute="width" id="456-Hw-WNG"/>
+                            <constraint firstItem="CvB-1y-D1i" firstAttribute="centerX" secondItem="gP0-oJ-qNn" secondAttribute="centerX" id="7q1-b8-73a"/>
+                            <constraint firstItem="kI7-Gv-yUH" firstAttribute="top" secondItem="BVo-eD-RFc" secondAttribute="bottom" id="C3p-HB-ZSb"/>
+                            <constraint firstAttribute="trailing" secondItem="kI7-Gv-yUH" secondAttribute="trailing" id="byV-qt-Ec6"/>
+                            <constraint firstItem="pxM-ss-0Qv" firstAttribute="top" secondItem="i2v-N8-Bz6" secondAttribute="bottom" constant="30" id="kJU-uv-VKw"/>
+                            <constraint firstItem="i2v-N8-Bz6" firstAttribute="top" secondItem="CvB-1y-D1i" secondAttribute="bottom" constant="7" id="qFR-NE-YRD"/>
+                            <constraint firstItem="kI7-Gv-yUH" firstAttribute="leading" secondItem="gP0-oJ-qNn" secondAttribute="leading" id="tBz-nJ-Tyj"/>
+                            <constraint firstItem="i2v-N8-Bz6" firstAttribute="centerX" secondItem="gP0-oJ-qNn" secondAttribute="centerX" id="xdI-mg-Z6H"/>
+                            <constraint firstItem="pxM-ss-0Qv" firstAttribute="top" secondItem="kI7-Gv-yUH" secondAttribute="bottom" id="yf5-Mp-J9k"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="真人视讯" image="cb_mono_on" id="7jH-lJ-gtH"/>
+                    <navigationItem key="navigationItem" title="真人视讯" id="BWe-1p-WL8"/>
+                    <connections>
+                        <outlet property="loginGameBtn" destination="CvB-1y-D1i" id="Zxg-Y7-pHD"/>
+                        <outlet property="page" destination="i2v-N8-Bz6" id="uGq-yM-SiH"/>
+                        <outlet property="scroll" destination="kI7-Gv-yUH" id="KNh-rn-nEC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmw-jL-LSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="1477"/>
+            <point key="canvasLocation" x="1544.8" y="1476.6116941529237"/>
         </scene>
         <!--电子游戏-->
         <scene sceneID="jhs-K8-eN4">
@@ -269,6 +313,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
@@ -401,7 +446,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="bXq-pt-Aw9" kind="relationship" relationship="viewControllers" id="3gU-32-mzz"/>
-                        <segue destination="YuC-m9-oTB" kind="relationship" relationship="viewControllers" id="klN-8x-x6b"/>
+                        <segue destination="o3c-qc-Toj" kind="relationship" relationship="viewControllers" id="klN-8x-x6b"/>
                         <segue destination="iXE-NQ-moq" kind="relationship" relationship="viewControllers" id="blK-lx-e7z"/>
                         <segue destination="6JO-Qf-VKH" kind="relationship" relationship="viewControllers" id="bjf-Jv-i2n"/>
                         <segue destination="uyS-Bv-3fi" kind="relationship" relationship="viewControllers" id="Y7Y-NT-art"/>
@@ -501,6 +546,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Re8-Fm-Pij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="836" y="2156.6716641679163"/>
+        </scene>
+        <!--真人视讯-->
+        <scene sceneID="5SM-yU-4PL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o3c-qc-Toj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="真人视讯" image="cb_mono_on" id="7jH-lJ-gtH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gNX-gM-16w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YuC-m9-oTB" kind="relationship" relationship="rootViewController" id="QoP-Hl-iqe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZf-Cc-7Yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="1476.6116941529237"/>
         </scene>
     </scenes>
     <resources>

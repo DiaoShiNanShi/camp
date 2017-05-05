@@ -16,6 +16,7 @@
 #import "AFNetworking.h"
 #import "MJExtension.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "KLCPopup.h"
 
 /* 宏 */
 #import "api_Url.h"

@@ -14,6 +14,20 @@
 #define kScreenWidth                        CGRectGetWidth([UIScreen mainScreen].bounds)
 #define kScreenHeight                       CGRectGetHeight([UIScreen mainScreen].bounds)
 
+#define CGRectStatus            [[UIApplication sharedApplication] statusBarFrame]
+#define CGRectNav               self.navigationController.navigationBar.frame
+#define CGRectTab               self.tabBarController.tabBar.frame
+
+/* 电子游戏界面Collection的宽高 */
+#define KGameCollectionCell_MG_Width                                 (kScreenWidth - 50) / 4
+#define KGameCollectionCell_PT_Width                                   (kScreenWidth - 40) / 3
+#define KGameCollectionCell_BB_Width                                   kScreenWidth
+#define KGameCollectionCell_AG_Width                                  (kScreenWidth - 30) / 2
+#define KGameCollectionCell_XT_Width                                   kScreenWidth
+#define KGameCollectionCellHeight                                           (kScreenWidth - 50) / 4 + 40
+
+
+#define KGamePopViewHeight                                                    300
 
 /* 持久化   数据 */
 #define persistenceData                        [NSUserDefaults standardUserDefaults]

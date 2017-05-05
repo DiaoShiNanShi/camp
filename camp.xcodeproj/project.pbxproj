@@ -35,6 +35,17 @@
 		6CD3EC961EB87DA60037564E /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC911EB87DA60037564E /* NSString+File.m */; };
 		6CD3EC971EB87DA60037564E /* CoreArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC931EB87DA60037564E /* CoreArchive.m */; };
 		6CD3EC9A1EB87ED60037564E /* CLLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC991EB87ED60037564E /* CLLockVC.m */; };
+		6CD9B8251EBC63F4001F5373 /* LiveVideoControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD9B8241EBC63F4001F5373 /* LiveVideoControl.m */; };
+		6CD9B8361EBC68D9001F5373 /* ic_video_pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9B8301EBC68D9001F5373 /* ic_video_pic1.jpg */; };
+		6CD9B8371EBC68D9001F5373 /* ic_video_pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9B8311EBC68D9001F5373 /* ic_video_pic2.jpg */; };
+		6CD9B8381EBC68D9001F5373 /* ic_video_pic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9B8321EBC68D9001F5373 /* ic_video_pic3.jpg */; };
+		6CD9B8391EBC68D9001F5373 /* ic_video_pic4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9B8331EBC68D9001F5373 /* ic_video_pic4.jpg */; };
+		6CD9B83A1EBC68D9001F5373 /* ic_video_pic5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9B8341EBC68D9001F5373 /* ic_video_pic5.jpg */; };
+		6CD9B83B1EBC68D9001F5373 /* ic_video_pic6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9B8351EBC68D9001F5373 /* ic_video_pic6.jpg */; };
+		6CD9B83F1EBC76D7001F5373 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD9B83E1EBC76D7001F5373 /* KLCPopup.m */; };
+		6CD9B8421EBC7887001F5373 /* PopContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD9B8411EBC7887001F5373 /* PopContentView.m */; };
+		6CD9B8461EBC8048001F5373 /* PopContentTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD9B8441EBC8048001F5373 /* PopContentTableCell.m */; };
+		6CD9B8471EBC8048001F5373 /* PopContentTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9B8451EBC8048001F5373 /* PopContentTableCell.xib */; };
 		6CEB31A81EBC281100A95344 /* GameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEB31A61EBC281100A95344 /* GameCell.m */; };
 		6CEB31A91EBC281100A95344 /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CEB31A71EBC281100A95344 /* GameCell.xib */; };
 		6CFD166C1EBAC21900D9C9E1 /* CampBaseControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD166B1EBAC21900D9C9E1 /* CampBaseControl.m */; };
@@ -119,6 +130,21 @@
 		6CD3EC951EB87DA60037564E /* CoreConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreConst.h; sourceTree = "<group>"; };
 		6CD3EC981EB87ED60037564E /* CLLockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLockVC.h; sourceTree = "<group>"; };
 		6CD3EC991EB87ED60037564E /* CLLockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLockVC.m; sourceTree = "<group>"; };
+		6CD9B8231EBC63F4001F5373 /* LiveVideoControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveVideoControl.h; sourceTree = "<group>"; };
+		6CD9B8241EBC63F4001F5373 /* LiveVideoControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveVideoControl.m; sourceTree = "<group>"; };
+		6CD9B8301EBC68D9001F5373 /* ic_video_pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_video_pic1.jpg; sourceTree = "<group>"; };
+		6CD9B8311EBC68D9001F5373 /* ic_video_pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_video_pic2.jpg; sourceTree = "<group>"; };
+		6CD9B8321EBC68D9001F5373 /* ic_video_pic3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_video_pic3.jpg; sourceTree = "<group>"; };
+		6CD9B8331EBC68D9001F5373 /* ic_video_pic4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_video_pic4.jpg; sourceTree = "<group>"; };
+		6CD9B8341EBC68D9001F5373 /* ic_video_pic5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_video_pic5.jpg; sourceTree = "<group>"; };
+		6CD9B8351EBC68D9001F5373 /* ic_video_pic6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_video_pic6.jpg; sourceTree = "<group>"; };
+		6CD9B83D1EBC76D7001F5373 /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
+		6CD9B83E1EBC76D7001F5373 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
+		6CD9B8401EBC7887001F5373 /* PopContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopContentView.h; sourceTree = "<group>"; };
+		6CD9B8411EBC7887001F5373 /* PopContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopContentView.m; sourceTree = "<group>"; };
+		6CD9B8431EBC8048001F5373 /* PopContentTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopContentTableCell.h; sourceTree = "<group>"; };
+		6CD9B8441EBC8048001F5373 /* PopContentTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopContentTableCell.m; sourceTree = "<group>"; };
+		6CD9B8451EBC8048001F5373 /* PopContentTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopContentTableCell.xib; sourceTree = "<group>"; };
 		6CEB31A51EBC281100A95344 /* GameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCell.h; sourceTree = "<group>"; };
 		6CEB31A61EBC281100A95344 /* GameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCell.m; sourceTree = "<group>"; };
 		6CEB31A71EBC281100A95344 /* GameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
@@ -302,6 +328,8 @@
 		6CD3EC481EB842630037564E /* reSource */ = {
 			isa = PBXGroup;
 			children = (
+				6CD9B83C1EBC76D7001F5373 /* KLCPopup */,
+				6CD9B82F1EBC689F001F5373 /* ic_Video_pic */,
 				6CD3EC6C1EB878890037564E /* GestureLock */,
 				6CD3EC5E1EB860370037564E /* Info.plist */,
 				6CD3EC5B1EB85FFC0037564E /* camp.xcdatamodeld */,
@@ -334,6 +362,7 @@
 		6CD3EC541EB854130037564E /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				6CD9B8221EBC63B2001F5373 /* LiveVideo */,
 				6CFD16691EBAC1ED00D9C9E1 /* BaseControl */,
 				6CFD16681EBAC1D100D9C9E1 /* ElectronicGame */,
 				6C8DBE6C1EB98C40007C55F1 /* Main */,
@@ -454,6 +483,49 @@
 			path = CoreExtend;
 			sourceTree = "<group>";
 		};
+		6CD9B8221EBC63B2001F5373 /* LiveVideo */ = {
+			isa = PBXGroup;
+			children = (
+				6CD9B8231EBC63F4001F5373 /* LiveVideoControl.h */,
+				6CD9B8241EBC63F4001F5373 /* LiveVideoControl.m */,
+			);
+			path = LiveVideo;
+			sourceTree = "<group>";
+		};
+		6CD9B8261EBC670D001F5373 /* LiveVideo */ = {
+			isa = PBXGroup;
+			children = (
+				6CD9B8401EBC7887001F5373 /* PopContentView.h */,
+				6CD9B8411EBC7887001F5373 /* PopContentView.m */,
+				6CD9B8431EBC8048001F5373 /* PopContentTableCell.h */,
+				6CD9B8441EBC8048001F5373 /* PopContentTableCell.m */,
+				6CD9B8451EBC8048001F5373 /* PopContentTableCell.xib */,
+			);
+			path = LiveVideo;
+			sourceTree = "<group>";
+		};
+		6CD9B82F1EBC689F001F5373 /* ic_Video_pic */ = {
+			isa = PBXGroup;
+			children = (
+				6CD9B8301EBC68D9001F5373 /* ic_video_pic1.jpg */,
+				6CD9B8311EBC68D9001F5373 /* ic_video_pic2.jpg */,
+				6CD9B8321EBC68D9001F5373 /* ic_video_pic3.jpg */,
+				6CD9B8331EBC68D9001F5373 /* ic_video_pic4.jpg */,
+				6CD9B8341EBC68D9001F5373 /* ic_video_pic5.jpg */,
+				6CD9B8351EBC68D9001F5373 /* ic_video_pic6.jpg */,
+			);
+			path = ic_Video_pic;
+			sourceTree = "<group>";
+		};
+		6CD9B83C1EBC76D7001F5373 /* KLCPopup */ = {
+			isa = PBXGroup;
+			children = (
+				6CD9B83D1EBC76D7001F5373 /* KLCPopup.h */,
+				6CD9B83E1EBC76D7001F5373 /* KLCPopup.m */,
+			);
+			path = KLCPopup;
+			sourceTree = "<group>";
+		};
 		6CFD16681EBAC1D100D9C9E1 /* ElectronicGame */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +547,7 @@
 		6CFD16701EBAD9B000D9C9E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6CD9B8261EBC670D001F5373 /* LiveVideo */,
 				6CFD16711EBAD9D400D9C9E1 /* ElectronicGame */,
 			);
 			path = View;
@@ -609,11 +682,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD9B83A1EBC68D9001F5373 /* ic_video_pic5.jpg in Resources */,
+				6CD9B8381EBC68D9001F5373 /* ic_video_pic3.jpg in Resources */,
+				6CD9B8391EBC68D9001F5373 /* ic_video_pic4.jpg in Resources */,
+				6CD9B83B1EBC68D9001F5373 /* ic_video_pic6.jpg in Resources */,
 				6CD3EC5F1EB860370037564E /* Info.plist in Resources */,
 				6CEB31A91EBC281100A95344 /* GameCell.xib in Resources */,
+				6CD9B8361EBC68D9001F5373 /* ic_video_pic1.jpg in Resources */,
 				6CD3EC521EB852F20037564E /* Main.storyboard in Resources */,
 				6CD3EC4B1EB843130037564E /* Assets.xcassets in Resources */,
 				6CD3EC511EB852F20037564E /* LaunchScreen.storyboard in Resources */,
+				6CD9B8471EBC8048001F5373 /* PopContentTableCell.xib in Resources */,
+				6CD9B8371EBC68D9001F5373 /* ic_video_pic2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,12 +781,16 @@
 				6CD3EC5D1EB85FFC0037564E /* camp.xcdatamodeld in Sources */,
 				6CD3EC8D1EB87D940037564E /* CLLockView.m in Sources */,
 				6CB6A4ED1EB834B400FD9895 /* main.m in Sources */,
+				6CD9B8421EBC7887001F5373 /* PopContentView.m in Sources */,
 				6CEB31A81EBC281100A95344 /* GameCell.m in Sources */,
+				6CD9B8251EBC63F4001F5373 /* LiveVideoControl.m in Sources */,
 				6C8DBE811EB9DD8E007C55F1 /* gameModel.m in Sources */,
 				6C8DBE601EB970A1007C55F1 /* CSNetWorkIngManager.m in Sources */,
+				6CD9B83F1EBC76D7001F5373 /* KLCPopup.m in Sources */,
 				6CD3EC8B1EB87D940037564E /* CLLockLabel.m in Sources */,
 				6CFD166C1EBAC21900D9C9E1 /* CampBaseControl.m in Sources */,
 				6C8DBE6F1EB98D2E007C55F1 /* MainTabBarControl.m in Sources */,
+				6CD9B8461EBC8048001F5373 /* PopContentTableCell.m in Sources */,
 				6CD3EC881EB87D940037564E /* CLLockNavVC.m in Sources */,
 				6C8DBE7B1EB9CEB2007C55F1 /* DataBaseModel.m in Sources */,
 				6CD3EC871EB87D940037564E /* CoreLockConst.m in Sources */,

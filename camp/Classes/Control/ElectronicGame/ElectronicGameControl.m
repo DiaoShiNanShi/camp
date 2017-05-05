@@ -45,6 +45,7 @@
         didSelectIndex = selectIndex;
         groupModel = dataBase.gameGroups[didSelectIndex];
         [weakSelf.collection reloadData];
+        [weakSelf.collection setContentOffset:CGPointMake(0, 0) animated:YES];
     };
 }
 
@@ -56,21 +57,18 @@
     gameModel *game_ = dataBase.games[groupModel.code][indexPath.row];
     GameCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:KGamesCollectionViewCell forIndexPath:indexPath];
     cell.gameName.text = game_.name1;
+    [cell.gameIcon sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseUrl,game_.picPath1]]];
     return cell;
 }
 
 /** 返回每个Item的Size */
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGSize size;
-    float magin = 10.0;
-    size = CGSizeMake((kScreenWidth - (magin * 8)) / 4, (kScreenWidth - (magin * 8)) / 4);
-    return size;
-    
+    if([groupModel.code isEqualToString:@"mg"])return CGSizeMake(KGameCollectionCell_MG_Width, KGameCollectionCellHeight);
+    if([groupModel.code isEqualToString:@"pt"])return CGSizeMake(KGameCollectionCell_PT_Width, KGameCollectionCellHeight);
+    if([groupModel.code isEqualToString:@"bb"])return CGSizeMake(KGameCollectionCell_BB_Width, KGameCollectionCellHeight);
+    if([groupModel.code isEqualToString:@"ag"])return CGSizeMake(KGameCollectionCell_AG_Width, KGameCollectionCellHeight);
+    if([groupModel.code isEqualToString:@"xt"])return CGSizeMake(KGameCollectionCell_XT_Width, KGameCollectionCellHeight);
+    return CGSizeMake(KGameCollectionCell_MG_Width, KGameCollectionCellHeight);
 }
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(0, 0, 0, 0);
-}
-
 @end
