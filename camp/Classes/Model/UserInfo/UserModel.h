@@ -6,9 +6,9 @@
 //  Copyright © 2017年 张三好. All rights reserved.
 //
 
-#import <JSONModel/JSONModel.h>
+#import "UserModel.h"
 
-@interface UserModel : JSONModel
+@interface UserModel : NSObject<NSCoding>
 @property (assign, nonatomic) NSInteger agentType;
 @property (copy, nonatomic) NSString *care;
 @property (copy, nonatomic) NSString *coin;

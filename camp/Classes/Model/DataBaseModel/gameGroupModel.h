@@ -6,10 +6,10 @@
 //  Copyright © 2017年 张三好. All rights reserved.
 //
 
-#import <JSONModel/JSONModel.h>
+#import "gameGroupModel.h"
 
 /* 游戏分组 */
-@interface gameGroupModel : JSONModel
+@interface gameGroupModel : NSObject<NSCoding>
 
 @property (nonatomic, assign) BOOL android;
 @property (nonatomic, copy) NSString *code;

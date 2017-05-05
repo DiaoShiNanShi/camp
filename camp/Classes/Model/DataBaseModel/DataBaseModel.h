@@ -6,18 +6,16 @@
 //  Copyright © 2017年 张三好. All rights reserved.
 //
 
-#import <JSONModel/JSONModel.h>
-
-
+#import "DataBaseModel.h"
 @class gameGroupModel;
 @class gameModel;
-@interface DataBaseModel : JSONModel<NSCoding>
+@interface DataBaseModel : NSObject<NSCoding>
 
 /* 游戏分组 */
 @property (nonatomic, strong) NSArray<gameGroupModel *> *gameGroups;
 
 /* 所有游戏*/
-@property (nonatomic, strong) NSDictionary *games;
+@property (nonatomic, strong) NSMutableDictionary <NSString *,NSArray<gameModel *> *> *games;
 
 /* 最新版本号 */
 @property (nonatomic, copy) NSString *version;

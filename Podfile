@@ -4,8 +4,8 @@ use_frameworks!
 target ‘camp’ do
     pod 'AFNetworking'
     pod 'Masonry'
-    pod 'JSONModel'
-    pod 'FMDB'
+    pod 'MJExtension'
+    pod 'SDWebImage', '~>3.8'
 end
 
 post_install do |installer|

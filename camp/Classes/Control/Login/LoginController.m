@@ -55,32 +55,34 @@
 #pragma mark - Login - 登录
 - (IBAction)CheckLogin:(id)sender{
     
-    NSString *userName = self.userNameTxt.text;
-    NSString *passWord = self.passWordTxt.text;
-    
-    if(userName.length <= 0 || passWord.length <= 0){
-        NSLog(@"账号或者密码不能为空");
-        return;
+    @try {
+        NSString *userName = self.userNameTxt.text;
+        NSString *passWord = self.passWordTxt.text;
+        
+        if(userName.length <= 0 || passWord.length <= 0){
+            NSLog(@"账号或者密码不能为空");
+            return;
+        }
+        NSMutableDictionary *parment = [NSMutableDictionary dictionary];
+        [parment setValue:userName forKey:@"username"];
+        [parment setValue:passWord forKey:@"password"];
+        [parment setValue:@"0" forKey:@"type"];
+        
+        NSLog(@"________________开始登陆..........");
+        [[CSNetWorkIngManager sharNetWorkManager] Post:Login withCommletionHandler:^(id result, NSError *error) {
+            NSLog(@"________________登陆成功..........");
+            /* 模型转换成功 ，保存数据跳转*/
+            UserModel *entity = [UserModel mj_objectWithKeyValues:result[@"member"] ];
+            [persistenceData setObject:[NSKeyedArchiver archivedDataWithRootObject:entity] forKey:PD_UserInfo];
+            [persistenceData synchronize];
+            MainTabBarControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:KMainTabBarIdentFiler];
+            [KAppDelegate restoreRootViewController:Vc];
+        } withParameters:parment withcompletionHandlerError:^(NSString *code) {
+            NSLog(@"%@",code);
+        }];
+    } @catch (NSException *exception) {
+        NSLog(@"___程序出错");
     }
-    
-    NSMutableDictionary *parment = [NSMutableDictionary dictionary];
-    [parment setValue:userName forKey:@"username"];
-    [parment setValue:passWord forKey:@"password"];
-    [parment setValue:@"0" forKey:@"type"];
-    
-    NSLog(@"________________开始登陆..........");
-    [[CSNetWorkIngManager sharNetWorkManager] Post:Login withCommletionHandler:^(id result, NSError *error) {
-    NSLog(@"________________登陆成功..........");
-        /* 模型转换成功 ，保存数据跳转*/
-        NSError *err;
-        UserModel *entity = [[UserModel alloc] initWithDictionary:result[@"member"] error:&err];
-        [persistenceData setObject:[NSKeyedArchiver archivedDataWithRootObject:entity] forKey:PD_UserInfo];
-        [persistenceData synchronize];
-        MainTabBarControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:KMainTabBarIdentFiler];
-        [KAppDelegate restoreRootViewController:Vc];
-    } withParameters:parment withcompletionHandlerError:^(NSString *code) {
-        NSLog(@"%@",code);
-    }];
 }
 - (void)dealloc{
     NSLog(@"成功释放控制器 ============ %@",NSStringFromClass([self class]));

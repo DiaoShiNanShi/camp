@@ -6,9 +6,9 @@
 //  Copyright © 2017年 张三好. All rights reserved.
 //
 
-#import <JSONModel/JSONModel.h>
+#import "gameModel.h"
 
-@interface gameModel : JSONModel
+@interface gameModel : NSObject<NSCoding>
 
 @property (nonatomic, assign) BOOL android;
 @property (nonatomic, copy) NSString *clientInfo;

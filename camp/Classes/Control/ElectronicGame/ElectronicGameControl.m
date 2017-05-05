@@ -8,6 +8,7 @@
 
 #import "ElectronicGameControl.h"
 #import "GameElectronicMenu.h"
+#import "GameCell.h"
 
 @interface ElectronicGameControl ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
@@ -36,27 +37,40 @@
     /* 默认选择第一个分组模型 */
     groupModel = dataBase.gameGroups[didSelectIndex];
     
+    /* 注册collectionCell */
+    [self.collection registerNib:[UINib nibWithNibName:@"GameCell" bundle:nil] forCellWithReuseIdentifier:KGamesCollectionViewCell];
+    
     __weak typeof(self)  weakSelf = self;
     self.gameMenu.didSelectGameMenu = ^(NSInteger selectIndex) {
         didSelectIndex = selectIndex;
         groupModel = dataBase.gameGroups[didSelectIndex];
-        
         [weakSelf.collection reloadData];
     };
 }
 
 #pragma mark - UICollectionViewDelegate,UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 0;
+    return [dataBase.games[groupModel.code] count];
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return nil;
+    gameModel *game_ = dataBase.games[groupModel.code][indexPath.row];
+    GameCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:KGamesCollectionViewCell forIndexPath:indexPath];
+    cell.gameName.text = game_.name1;
+    return cell;
 }
 
 /** 返回每个Item的Size */
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(50, 50);
+    CGSize size;
+    float magin = 10.0;
+    size = CGSizeMake((kScreenWidth - (magin * 8)) / 4, (kScreenWidth - (magin * 8)) / 4);
+    return size;
+    
+}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 @end

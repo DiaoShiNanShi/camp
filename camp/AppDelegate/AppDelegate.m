@@ -27,7 +27,7 @@
         /* 解档数据 */
         NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
         DataBaseModel *dataBase;
-        if(![UnarchiveDataBase isEqual:nil]){
+        if(UnarchiveDataBase != nil){
             dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
             /* 更新本地保存版本号 */
             [persistenceData setValue:dataBase.version forKey:PD_Version];
@@ -35,17 +35,14 @@
         NSMutableDictionary *parment = [NSMutableDictionary dictionary];
         [parment setValue:@"CS" forKey:@"plantform"];
         [parment setValue:@"123456" forKey:@"merID"];
-//        [parment setValue:dataBase == nil? @"": dataBase.version forKey:@"version"];
-         [parment setValue: @"" forKey:@"version"];
+        [parment setValue:dataBase == nil? @"": dataBase.version forKey:@"version"];
         
         [[CSNetWorkIngManager sharNetWorkManager] Post:DataBase withCommletionHandler:^(id result, NSError *error) {
             /* 如果版本号相同 则不需要进行下一步 */
-//            if([[persistenceData valueForKey:PD_Version] isEqualToString:result[@"version"]]){
-//                return ;
-//            }
-            NSError *err;
-            DataBaseModel *model = [[DataBaseModel alloc] initWithDictionary:result error:&err];
-            
+            if([[persistenceData valueForKey:PD_Version] isEqualToString:result[@"version"]]){
+                return ;
+            }
+            DataBaseModel *model = [DataBaseModel mj_objectWithKeyValues:result];
             /* 写入到文件中 */
             NSData *baseData = [NSKeyedArchiver archivedDataWithRootObject:model];
             [baseData writeToFile:LocalDataBaseModelFilePath atomically:YES];

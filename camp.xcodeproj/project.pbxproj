@@ -35,6 +35,8 @@
 		6CD3EC961EB87DA60037564E /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC911EB87DA60037564E /* NSString+File.m */; };
 		6CD3EC971EB87DA60037564E /* CoreArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC931EB87DA60037564E /* CoreArchive.m */; };
 		6CD3EC9A1EB87ED60037564E /* CLLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC991EB87ED60037564E /* CLLockVC.m */; };
+		6CEB31A81EBC281100A95344 /* GameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEB31A61EBC281100A95344 /* GameCell.m */; };
+		6CEB31A91EBC281100A95344 /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CEB31A71EBC281100A95344 /* GameCell.xib */; };
 		6CFD166C1EBAC21900D9C9E1 /* CampBaseControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD166B1EBAC21900D9C9E1 /* CampBaseControl.m */; };
 		6CFD166F1EBAC27500D9C9E1 /* ElectronicGameControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD166E1EBAC27500D9C9E1 /* ElectronicGameControl.m */; };
 		6CFD16791EBADBA300D9C9E1 /* GameElectronicMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD16781EBADBA300D9C9E1 /* GameElectronicMenu.m */; };
@@ -117,6 +119,9 @@
 		6CD3EC951EB87DA60037564E /* CoreConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreConst.h; sourceTree = "<group>"; };
 		6CD3EC981EB87ED60037564E /* CLLockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLockVC.h; sourceTree = "<group>"; };
 		6CD3EC991EB87ED60037564E /* CLLockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLockVC.m; sourceTree = "<group>"; };
+		6CEB31A51EBC281100A95344 /* GameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCell.h; sourceTree = "<group>"; };
+		6CEB31A61EBC281100A95344 /* GameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCell.m; sourceTree = "<group>"; };
+		6CEB31A71EBC281100A95344 /* GameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
 		6CFD166A1EBAC21900D9C9E1 /* CampBaseControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampBaseControl.h; sourceTree = "<group>"; };
 		6CFD166B1EBAC21900D9C9E1 /* CampBaseControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampBaseControl.m; sourceTree = "<group>"; };
 		6CFD166D1EBAC27500D9C9E1 /* ElectronicGameControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronicGameControl.h; sourceTree = "<group>"; };
@@ -480,6 +485,9 @@
 			children = (
 				6CFD16771EBADBA300D9C9E1 /* GameElectronicMenu.h */,
 				6CFD16781EBADBA300D9C9E1 /* GameElectronicMenu.m */,
+				6CEB31A51EBC281100A95344 /* GameCell.h */,
+				6CEB31A61EBC281100A95344 /* GameCell.m */,
+				6CEB31A71EBC281100A95344 /* GameCell.xib */,
 			);
 			path = ElectronicGame;
 			sourceTree = "<group>";
@@ -602,6 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CD3EC5F1EB860370037564E /* Info.plist in Resources */,
+				6CEB31A91EBC281100A95344 /* GameCell.xib in Resources */,
 				6CD3EC521EB852F20037564E /* Main.storyboard in Resources */,
 				6CD3EC4B1EB843130037564E /* Assets.xcassets in Resources */,
 				6CD3EC511EB852F20037564E /* LaunchScreen.storyboard in Resources */,
@@ -692,6 +701,7 @@
 				6CD3EC5D1EB85FFC0037564E /* camp.xcdatamodeld in Sources */,
 				6CD3EC8D1EB87D940037564E /* CLLockView.m in Sources */,
 				6CB6A4ED1EB834B400FD9895 /* main.m in Sources */,
+				6CEB31A81EBC281100A95344 /* GameCell.m in Sources */,
 				6C8DBE811EB9DD8E007C55F1 /* gameModel.m in Sources */,
 				6C8DBE601EB970A1007C55F1 /* CSNetWorkIngManager.m in Sources */,
 				6CD3EC8B1EB87D940037564E /* CLLockLabel.m in Sources */,

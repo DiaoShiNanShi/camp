@@ -9,8 +9,10 @@
 #ifndef app_Geneal_h
 #define app_Geneal_h
 
-#define KAppDelegate                    ((AppDelegate *)[UIApplication sharedApplication].delegate)
+#define KAppDelegate                       ((AppDelegate *)[UIApplication sharedApplication].delegate)
 #define KMainStoryboard                 [UIStoryboard storyboardWithName:@"Main" bundle:nil]
+#define kScreenWidth                        CGRectGetWidth([UIScreen mainScreen].bounds)
+#define kScreenHeight                       CGRectGetHeight([UIScreen mainScreen].bounds)
 
 
 /* 持久化   数据 */
@@ -29,5 +31,8 @@
 
 /*                   IdentFiler_Control*/
 #define KMainTabBarIdentFiler                                           @"MainTabBarControlIdentFiler"
+
+/*                  IdentFiler_GameCollectionCell */
+#define KGamesCollectionViewCell                                       @"KGamesCollectionViewCellIdentfiler"
 
 #endif /* app_Geneal_h */
