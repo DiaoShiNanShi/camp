@@ -16,6 +16,8 @@ PODS:
     - AFNetworking/NSURLSession
   - Masonry (1.0.2)
   - MJExtension (3.0.13)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -24,14 +26,16 @@ DEPENDENCIES:
   - AFNetworking
   - Masonry
   - MJExtension
+  - SDCycleScrollView
   - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: d7f97f6757ff610c63bdc26e60a15fd5ec177c21
+PODFILE CHECKSUM: 1f2df583109a754601042bcd28c0ec04eef6a46e
 
 COCOAPODS: 1.2.1

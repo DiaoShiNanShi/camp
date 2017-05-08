@@ -28,6 +28,13 @@
                 }
                 [self.games setValue:gameArray_ forKey:key];
             }];
+        }else if([key isEqualToString:@"types"]){
+            
+            NSMutableArray<typesModel *> *types_ = [NSMutableArray array];
+            for (NSDictionary *item in value) {
+                [types_ addObject:[typesModel mj_objectWithKeyValues:item]];
+            }
+            [super setValue:types_ forKey:key];
         }else{
             [super setValue:value forKey:key];
         }
@@ -41,6 +48,7 @@
     [aCoder encodeObject:_gameGroups forKey:@"gameGroups"];
     [aCoder encodeObject:_games forKey:@"games"];
     [aCoder encodeObject:_version forKey:@"version"];
+    [aCoder encodeObject:_types forKey:@"types"];
 }
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
@@ -48,6 +56,7 @@
         self.gameGroups = [aDecoder decodeObjectForKey:@"gameGroups"];
         self.games = [aDecoder decodeObjectForKey:@"games"];
         self.version = [aDecoder decodeObjectForKey:@"version"];
+        self.types = [aDecoder decodeObjectForKey:@"types"];
     }
     return self;
 }

@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.tabBar setBarTintColor:RGBACOLOR(12, 12, 12, 1)];
+    self.tabBar.tintColor  = RGBACOLOR(233, 197, 123, 1);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,0 +1,27 @@
+/* 
+  CustomLocalizable.strings
+  camp
+
+  Created by 张三好 on 2017/5/8.
+  Copyright © 2017年 张三好. All rights reserved.
+*/
+
+"tabbar_lottery" = "lottery";
+
+
+
+
+
+
+
+
+
+/* 登陆界面 */
+"account_name" = "account:";
+"password_name" = "password:";
+"login_btn" = "Login";
+"rememberAccout" = "rememberAccount";
+"gesturesLogin" = "gesturesLogin";
+
+
+

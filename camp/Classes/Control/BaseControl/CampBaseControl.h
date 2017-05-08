@@ -10,4 +10,6 @@
 
 @interface CampBaseControl : UIViewController
 
+/** 更新语言 */
+- (void)updateLanguage;
 @end

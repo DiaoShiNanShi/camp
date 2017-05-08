@@ -30,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    selectPageIndex = 1;
+    selectPageIndex = 0;
     /* 把分页控制器放到视图最前面 */
     [self.view bringSubviewToFront:self.page];
     [self.view bringSubviewToFront:self.loginGameBtn];
@@ -45,7 +45,7 @@
     [self CreatePopContentView];
 }
 - (void)CreatePopContentView{
-   
+    
     popCv_one = [[PopContentView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth - 20, KGamePopViewHeight)];
     popCv_one.layer.cornerRadius = 3.0;
     popCv_one.layer.masksToBounds = YES;
@@ -65,7 +65,7 @@
     selectPageIndex = currentPage;
 }
 - (IBAction)OpenGamePopContentView:(UIButton *)sender {
-    if(selectPageIndex == 1){
+    if(selectPageIndex == 0){
         [PopView_two dismiss:YES];
         [PopView_one show];
     }else{

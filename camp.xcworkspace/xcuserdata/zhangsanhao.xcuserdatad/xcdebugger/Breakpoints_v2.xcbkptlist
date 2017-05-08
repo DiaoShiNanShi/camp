@@ -20,18 +20,28 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "camp/Classes/Control/LiveVideo/LiveVideoControl.m"
-            timestampString = "515671649.64392"
+            filePath = "camp/Tool/FGLanguageTool.m"
+            timestampString = "515923420.946865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "-OpenGamePopContentView:"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "-resetRootViewController"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

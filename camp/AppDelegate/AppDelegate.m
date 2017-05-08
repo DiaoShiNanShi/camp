@@ -20,8 +20,30 @@
     
     // 请求页面数据 并归档
     [self getDataBase];
+    
+    /* 获取当前语言配置 */
+    [self getLanguage];
     return YES;
 }
+- (void) getLanguage{
+    if(self.lan == nil || [self.lan isEqualToString:@""]){
+        /**
+         * 获取用户的语言偏好设置列表，该列表对应于IOS中Setting>General>Language弹出的面板中的语言列表。
+         */
+        NSArray *languages = [NSLocale preferredLanguages];
+        /**
+         *  第0个元素即为当前用户设置的语言
+         */
+        NSString *language = [languages objectAtIndex:0];
+        self.lan = @"zh-Hans";
+//        if ([language hasPrefix:@"zh-Hans"]) {
+//            self.lan = @"zh-Hans";
+//        }else{
+//            self.lan = @"en";
+//        }
+    }
+}
+
 -  (void) getDataBase{
     @try {
         /* 解档数据 */
@@ -36,6 +58,7 @@
         [parment setValue:@"CS" forKey:@"plantform"];
         [parment setValue:@"123456" forKey:@"merID"];
         [parment setValue:dataBase == nil? @"": dataBase.version forKey:@"version"];
+//        [parment setValue: @"" forKey:@"version"];
         
         [[CSNetWorkIngManager sharNetWorkManager] Post:DataBase withCommletionHandler:^(id result, NSError *error) {
             /* 如果版本号相同 则不需要进行下一步 */
@@ -46,6 +69,7 @@
             /* 写入到文件中 */
             NSData *baseData = [NSKeyedArchiver archivedDataWithRootObject:model];
             [baseData writeToFile:LocalDataBaseModelFilePath atomically:YES];
+            NSLog(@"a");
         } withParameters:parment withcompletionHandlerError:^(NSString *code) {
             NSLog(@"");
         }];
@@ -83,6 +107,11 @@
     [self saveContext];
 }
 
+-(NSString *)showText:(NSString *)key
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:_lan ofType:@"lproj"];
+    return [[NSBundle bundleWithPath:path] localizedStringForKey:key value:nil table:@"CustomLocalizable"];
+}
 
 #pragma mark - Core Data stack
 
@@ -148,5 +177,6 @@
         abort();
     }
 }
+
 
 @end

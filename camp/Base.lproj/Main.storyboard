@@ -14,7 +14,7 @@
         <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginIdentfiler" id="BYZ-38-t0r" customClass="LoginController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -191,9 +191,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="OI2-bZ-K24"/>
                     <connections>
+                        <outlet property="account" destination="FYY-n6-ck3" id="nWP-M2-rfS"/>
                         <outlet property="checkBox" destination="461-JT-BIn" id="1Vk-rc-Fr7"/>
                         <outlet property="checkBoxBtn" destination="tLZ-EC-Jxc" id="gxN-w0-2L4"/>
+                        <outlet property="gesturesLoginBtn" destination="uzN-gN-QTh" id="Cad-dr-oV7"/>
+                        <outlet property="loginButton" destination="jtr-VL-Ufg" id="oDq-3q-zWO"/>
+                        <outlet property="passWord" destination="CkB-S2-Yjm" id="feH-1J-m57"/>
                         <outlet property="passWordTxt" destination="rfk-pc-bj8" id="jtv-2J-gJu"/>
+                        <outlet property="rememberAccoutBtn" destination="tLZ-EC-Jxc" id="gbN-m9-Kli"/>
                         <outlet property="userNameTxt" destination="ukX-vG-KgD" id="dYc-TW-YvU"/>
                     </connections>
                 </viewController>
@@ -277,16 +282,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SV-9K-aPz" customClass="GameElectronicMenu">
-                                <rect key="frame" x="0.0" y="64" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="45"/>
+                                <color key="backgroundColor" red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="8SV-9K-aPz" secondAttribute="height" multiplier="1:0.13" id="VJx-2p-wDf"/>
+                                    <constraint firstAttribute="width" secondItem="8SV-9K-aPz" secondAttribute="height" multiplier="1:0.12" id="VJx-2p-wDf"/>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKD-y6-ZN8">
-                                <rect key="frame" x="0.0" y="113" width="375" height="48.5"/>
+                                <rect key="frame" x="0.0" y="109" width="375" height="44.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入你要搜索的内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B72-7o-zXh">
-                                        <rect key="frame" x="10" y="5" width="293.5" height="38.5"/>
+                                        <rect key="frame" x="10" y="5" width="293.5" height="34.5"/>
+                                        <color key="backgroundColor" red="0.38039215686274508" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -300,13 +307,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfJ-8Q-Jxy">
-                                        <rect key="frame" x="313.5" y="7" width="51.5" height="33"/>
-                                        <color key="backgroundColor" red="0.003213443560525775" green="0.28970059752464294" blue="0.99846142530441284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="313.5" y="5" width="51.5" height="33"/>
+                                        <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="rfJ-8Q-Jxy" secondAttribute="height" multiplier="50:32" id="HpE-bS-gad"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="搜索">
+                                        <state key="normal" title="确定">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -314,10 +321,16 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                                <color key="value" red="0.34901960784313724" green="0.30196078431372547" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.21140087329999999" green="1" blue="0.19304757219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="rfJ-8Q-Jxy" firstAttribute="leading" secondItem="B72-7o-zXh" secondAttribute="trailing" constant="10" id="9lO-Uz-ant"/>
                                     <constraint firstItem="B72-7o-zXh" firstAttribute="top" secondItem="uKD-y6-ZN8" secondAttribute="top" constant="5" id="OAM-HZ-W62"/>
@@ -329,8 +342,8 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4eu-cr-qAv">
-                                <rect key="frame" x="0.0" y="161.5" width="375" height="456.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="153.5" width="375" height="464.5"/>
+                                <color key="backgroundColor" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MUc-La-bir">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -416,10 +429,10 @@
             </objects>
             <point key="canvasLocation" x="22" y="2157"/>
         </scene>
-        <!--彩票/体育-->
+        <!--Lottery Control-->
         <scene sceneID="eB4-0a-acQ">
             <objects>
-                <viewController id="bXq-pt-Aw9" sceneMemberID="viewController">
+                <viewController id="bXq-pt-Aw9" customClass="LotteryControl" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RMr-vU-tZK"/>
                         <viewControllerLayoutGuide type="bottom" id="FUP-Ph-8Rf"/>
@@ -427,13 +440,43 @@
                     <view key="view" contentMode="scaleToFill" id="ydX-Xl-KKl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feG-Wf-kz6" customClass="SDCycleScrollView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="feG-Wf-kz6" secondAttribute="height" multiplier="25:12" id="7rb-5p-D5P"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hXQ-Ua-ZOi">
+                                <rect key="frame" x="0.0" y="254" width="375" height="364"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bXq-pt-Aw9" id="biE-aT-CCa"/>
+                                    <outlet property="delegate" destination="bXq-pt-Aw9" id="fIf-Xi-TPj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hXQ-Ua-ZOi" firstAttribute="top" secondItem="feG-Wf-kz6" secondAttribute="bottom" constant="10" id="4ht-zq-D3p"/>
+                            <constraint firstItem="hXQ-Ua-ZOi" firstAttribute="leading" secondItem="ydX-Xl-KKl" secondAttribute="leading" id="9q1-Rj-ALh"/>
+                            <constraint firstAttribute="trailing" secondItem="feG-Wf-kz6" secondAttribute="trailing" id="GLH-4d-bxO"/>
+                            <constraint firstItem="FUP-Ph-8Rf" firstAttribute="top" secondItem="hXQ-Ua-ZOi" secondAttribute="bottom" id="KJ4-b4-XnS"/>
+                            <constraint firstAttribute="trailing" secondItem="hXQ-Ua-ZOi" secondAttribute="trailing" id="Xlr-cD-zDT"/>
+                            <constraint firstItem="feG-Wf-kz6" firstAttribute="top" secondItem="RMr-vU-tZK" secondAttribute="bottom" id="n7g-ty-FTB"/>
+                            <constraint firstItem="feG-Wf-kz6" firstAttribute="leading" secondItem="ydX-Xl-KKl" secondAttribute="leading" id="pXS-4I-Nnn"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="彩票/体育" image="cb_mono_on" id="1qh-Z9-H17"/>
+                    <navigationItem key="navigationItem" id="5po-04-Yk3"/>
+                    <connections>
+                        <outlet property="sdCycView" destination="feG-Wf-kz6" id="1As-U4-F91"/>
+                        <outlet property="table" destination="hXQ-Ua-ZOi" id="3U0-hk-QTt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9v-ed-2ZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="807"/>
+            <point key="canvasLocation" x="1544.8" y="805.54722638680664"/>
         </scene>
         <!--Main Tab Bar Control-->
         <scene sceneID="hfC-52-cl1">
@@ -445,7 +488,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="bXq-pt-Aw9" kind="relationship" relationship="viewControllers" id="3gU-32-mzz"/>
+                        <segue destination="1kn-PY-2Xh" kind="relationship" relationship="viewControllers" id="3gU-32-mzz"/>
                         <segue destination="o3c-qc-Toj" kind="relationship" relationship="viewControllers" id="klN-8x-x6b"/>
                         <segue destination="iXE-NQ-moq" kind="relationship" relationship="viewControllers" id="blK-lx-e7z"/>
                         <segue destination="6JO-Qf-VKH" kind="relationship" relationship="viewControllers" id="bjf-Jv-i2n"/>
@@ -565,6 +608,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZf-Cc-7Yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="836" y="1476.6116941529237"/>
+        </scene>
+        <!--彩票/体育-->
+        <scene sceneID="y1j-Fp-MHd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1kn-PY-2Xh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="彩票/体育" image="cb_mono_on" id="1qh-Z9-H17"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5oi-N0-Tp8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bXq-pt-Aw9" kind="relationship" relationship="rootViewController" id="qaw-Xs-Atn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAR-44-c17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="806.44677661169419"/>
         </scene>
     </scenes>
     <resources>

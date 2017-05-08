@@ -6,6 +6,7 @@ target ‘camp’ do
     pod 'Masonry'
     pod 'MJExtension'
     pod 'SDWebImage', '~>3.8'
+    pod 'SDCycleScrollView'
 end
 
 post_install do |installer|

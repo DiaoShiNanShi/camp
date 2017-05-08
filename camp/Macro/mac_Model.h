@@ -13,5 +13,6 @@
 #import "DataBaseModel.h"
 #import "gameGroupModel.h"
 #import "gameModel.h"
+#import "typesModel.h"
 
 #endif /* mac_Model_h */

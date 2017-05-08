@@ -17,6 +17,9 @@
 #define CGRectStatus            [[UIApplication sharedApplication] statusBarFrame]
 #define CGRectNav               self.navigationController.navigationBar.frame
 #define CGRectTab               self.tabBarController.tabBar.frame
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define KMainStoryboard         [UIStoryboard storyboardWithName:@"Main" bundle:nil]
+#define kMainDelegate           ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 /* 电子游戏界面Collection的宽高 */
 #define KGameCollectionCell_MG_Width                                 (kScreenWidth - 50) / 4
@@ -27,8 +30,10 @@
 #define KGameCollectionCellHeight                                           (kScreenWidth - 50) / 4 + 40
 
 
-#define KGamePopViewHeight                                                    300
+/* 发送通知 - 更新文字 */
+#define NOTFICATION_NAME                                                @"Update_Text"
 
+#define KGamePopViewHeight                                                    300
 /* 持久化   数据 */
 #define persistenceData                        [NSUserDefaults standardUserDefaults]
 

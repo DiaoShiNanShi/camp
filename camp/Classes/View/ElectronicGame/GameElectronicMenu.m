@@ -47,6 +47,7 @@
             lbl.text = dataBase.gameGroups[i].describe;
             lbl.font = [UIFont systemFontOfSize:13];
             lbl.textAlignment = NSTextAlignmentCenter;
+            lbl.textColor = [UIColor whiteColor];
             lbl.userInteractionEnabled  = YES;
             lbl.tag = i;
             [lbl sizeToFit];
@@ -59,7 +60,7 @@
         }
         [self setContentSize:CGSizeMake(x, self.frame.size.height)];
         /* 默认第一个按钮高亮显示 */
-        [allMenuLabels.firstObject setTextColor:[UIColor redColor]];
+        [allMenuLabels.firstObject setTextColor:RGBACOLOR(201, 143, 43, 1)];
         prevBtnIndex = 0;
     } @catch (NSException *exception) {
         NSLog(@"___%@",exception.reason);
@@ -69,8 +70,8 @@
 /* 手势实现 */
 - (void)menuContentLblSelected:(UITapGestureRecognizer *)tap{
     if(tap.view.tag == prevBtnIndex)return;
-    [allMenuLabels[prevBtnIndex] setTextColor:[UIColor blackColor]];
-    [allMenuLabels[tap.view.tag] setTextColor:[UIColor redColor]];
+    [allMenuLabels[prevBtnIndex] setTextColor:[UIColor whiteColor]];
+    [allMenuLabels[tap.view.tag] setTextColor:RGBACOLOR(201, 143, 43, 1)];
     prevBtnIndex = tap.view.tag;
     
     /* 实现回调 */

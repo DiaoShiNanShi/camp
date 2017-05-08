@@ -18,11 +18,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.navigationController.navigationBar setBarTintColor:RGBACOLOR(12, 12, 12, 1)];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:RGBACOLOR(233, 197, 123, 1)};
+    [self updateLanguage];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)updateLanguage{
 }
 
 - (void)dealloc{

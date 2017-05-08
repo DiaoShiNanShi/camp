@@ -9,10 +9,14 @@
 #import "DataBaseModel.h"
 @class gameGroupModel;
 @class gameModel;
+@class typesModel;
 @interface DataBaseModel : NSObject<NSCoding>
 
 /* 游戏分组 */
 @property (nonatomic, strong) NSArray<gameGroupModel *> *gameGroups;
+
+/* 首页信息 */
+@property (nonatomic, strong) NSArray<typesModel *> *types;
 
 /* 所有游戏*/
 @property (nonatomic, strong) NSMutableDictionary <NSString *,NSArray<gameModel *> *> *games;
