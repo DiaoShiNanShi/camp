@@ -7,6 +7,11 @@ target ‘camp’ do
     pod 'MJExtension'
     pod 'SDWebImage', '~>3.8'
     pod 'SDCycleScrollView'
+    
+    pod 'LBXScan/LBXNative','~> 2.0'
+    pod 'LBXScan/LBXZXing','~> 2.0'
+    pod 'LBXScan/LBXZBar','~> 2.0'
+    pod 'LBXScan/UI','~> 2.0'
 end
 
 post_install do |installer|

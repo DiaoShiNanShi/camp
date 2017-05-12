@@ -23,6 +23,11 @@
 		6C07C6611EC00BD40086869E /* ic_banner2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C07C65E1EC00BD40086869E /* ic_banner2.png */; };
 		6C07C6621EC00BD40086869E /* ic_banner3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C07C65F1EC00BD40086869E /* ic_banner3.png */; };
 		6C07C6661EC010EE0086869E /* CustomGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C07C6651EC010EE0086869E /* CustomGroupView.m */; };
+		6C50CFF21EC55102000D97FC /* sportsGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C50CFF01EC55102000D97FC /* sportsGameCell.m */; };
+		6C50CFF31EC55102000D97FC /* sportsGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C50CFF11EC55102000D97FC /* sportsGameCell.xib */; };
+		6C50CFF81EC551C5000D97FC /* ic_physical_footer_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50CFF51EC551C5000D97FC /* ic_physical_footer_btn.png */; };
+		6C50CFF91EC551C5000D97FC /* ic_physical_footer1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50CFF61EC551C5000D97FC /* ic_physical_footer1.png */; };
+		6C50CFFA1EC551C5000D97FC /* ic_physical_footer2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50CFF71EC551C5000D97FC /* ic_physical_footer2.png */; };
 		6C8DBE601EB970A1007C55F1 /* CSNetWorkIngManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE5E1EB970A1007C55F1 /* CSNetWorkIngManager.m */; };
 		6C8DBE691EB97D60007C55F1 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE681EB97D60007C55F1 /* UserModel.m */; };
 		6C8DBE6F1EB98D2E007C55F1 /* MainTabBarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE6E1EB98D2E007C55F1 /* MainTabBarControl.m */; };
@@ -111,6 +116,12 @@
 		6C07C65F1EC00BD40086869E /* ic_banner3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_banner3.png; sourceTree = "<group>"; };
 		6C07C6641EC010EE0086869E /* CustomGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomGroupView.h; sourceTree = "<group>"; };
 		6C07C6651EC010EE0086869E /* CustomGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomGroupView.m; sourceTree = "<group>"; };
+		6C50CFEF1EC55102000D97FC /* sportsGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sportsGameCell.h; sourceTree = "<group>"; };
+		6C50CFF01EC55102000D97FC /* sportsGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sportsGameCell.m; sourceTree = "<group>"; };
+		6C50CFF11EC55102000D97FC /* sportsGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sportsGameCell.xib; sourceTree = "<group>"; };
+		6C50CFF51EC551C5000D97FC /* ic_physical_footer_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_physical_footer_btn.png; sourceTree = "<group>"; };
+		6C50CFF61EC551C5000D97FC /* ic_physical_footer1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_physical_footer1.png; sourceTree = "<group>"; };
+		6C50CFF71EC551C5000D97FC /* ic_physical_footer2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_physical_footer2.png; sourceTree = "<group>"; };
 		6C8DBE5E1EB970A1007C55F1 /* CSNetWorkIngManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNetWorkIngManager.m; sourceTree = "<group>"; };
 		6C8DBE5F1EB970A1007C55F1 /* CSNetWorkIngManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNetWorkIngManager.h; sourceTree = "<group>"; };
 		6C8DBE641EB971D2007C55F1 /* api_Url.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = api_Url.h; sourceTree = "<group>"; };
@@ -267,8 +278,21 @@
 			children = (
 				6C07C6641EC010EE0086869E /* CustomGroupView.h */,
 				6C07C6651EC010EE0086869E /* CustomGroupView.m */,
+				6C50CFEF1EC55102000D97FC /* sportsGameCell.h */,
+				6C50CFF01EC55102000D97FC /* sportsGameCell.m */,
+				6C50CFF11EC55102000D97FC /* sportsGameCell.xib */,
 			);
 			path = Lottery;
+			sourceTree = "<group>";
+		};
+		6C50CFF41EC55195000D97FC /* HomeTmpImage */ = {
+			isa = PBXGroup;
+			children = (
+				6C50CFF51EC551C5000D97FC /* ic_physical_footer_btn.png */,
+				6C50CFF61EC551C5000D97FC /* ic_physical_footer1.png */,
+				6C50CFF71EC551C5000D97FC /* ic_physical_footer2.png */,
+			);
+			path = HomeTmpImage;
 			sourceTree = "<group>";
 		};
 		6C8DBE651EB97CD6007C55F1 /* Model */ = {
@@ -411,6 +435,7 @@
 		6CD3EC481EB842630037564E /* reSource */ = {
 			isa = PBXGroup;
 			children = (
+				6C50CFF41EC55195000D97FC /* HomeTmpImage */,
 				6C0031701EC02B1F004C1081 /* contentIcon */,
 				6C07C65C1EC00BB70086869E /* Banner */,
 				6CD9B83C1EBC76D7001F5373 /* KLCPopup */,
@@ -771,6 +796,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C0031761EC02BCB004C1081 /* ic_lottery0.png in Resources */,
+				6C50CFF91EC551C5000D97FC /* ic_physical_footer1.png in Resources */,
 				6CD9B83A1EBC68D9001F5373 /* ic_video_pic5.jpg in Resources */,
 				6CD9B8381EBC68D9001F5373 /* ic_video_pic3.jpg in Resources */,
 				6CD9B8391EBC68D9001F5373 /* ic_video_pic4.jpg in Resources */,
@@ -778,8 +804,10 @@
 				6C0031961EC05F63004C1081 /* CustomLocalizable.strings in Resources */,
 				6CD9B83B1EBC68D9001F5373 /* ic_video_pic6.jpg in Resources */,
 				6C00318C1EC05859004C1081 /* LaunchScreen.storyboard in Resources */,
+				6C50CFF31EC55102000D97FC /* sportsGameCell.xib in Resources */,
 				6CD3EC5F1EB860370037564E /* Info.plist in Resources */,
 				6C07C6611EC00BD40086869E /* ic_banner2.png in Resources */,
+				6C50CFF81EC551C5000D97FC /* ic_physical_footer_btn.png in Resources */,
 				6CEB31A91EBC281100A95344 /* GameCell.xib in Resources */,
 				6CD9B8361EBC68D9001F5373 /* ic_video_pic1.jpg in Resources */,
 				6C00318D1EC05859004C1081 /* Main.storyboard in Resources */,
@@ -791,6 +819,7 @@
 				6C0031771EC02BCB004C1081 /* ic_lottery2.png in Resources */,
 				6C0031791EC02BCB004C1081 /* ic_lottery1.png in Resources */,
 				6C00317A1EC02BCB004C1081 /* ic_lottery3.png in Resources */,
+				6C50CFFA1EC551C5000D97FC /* ic_physical_footer2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,6 +912,7 @@
 				6CB6A4ED1EB834B400FD9895 /* main.m in Sources */,
 				6CD9B8421EBC7887001F5373 /* PopContentView.m in Sources */,
 				6CEB31A81EBC281100A95344 /* GameCell.m in Sources */,
+				6C50CFF21EC55102000D97FC /* sportsGameCell.m in Sources */,
 				6CD9B8251EBC63F4001F5373 /* LiveVideoControl.m in Sources */,
 				6C8DBE811EB9DD8E007C55F1 /* gameModel.m in Sources */,
 				6C8DBE601EB970A1007C55F1 /* CSNetWorkIngManager.m in Sources */,

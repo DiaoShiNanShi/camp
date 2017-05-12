@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LBXScan.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,15 +39,40 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ZBarSDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0B96A7A056A8EEBDB31440615E1972E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5AA17C95E926B760FD08E0B487DAEFA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B7BC9BC7E5AEB20D2501E667DE28F68</key>
+		<key>67850113B60C403AAFE1417976F53932</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B8DEC145D09AE0BAF13BA58B662FC1D6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C34CF55CB05B7875B2122795C5E05B9B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CA19504495835D5297E698BFAB9EDBDE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CFE1C825BD1D90E56A06337B680A5BC1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>D52144DE9D7255DE912490FF5A806573</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FA5F7D744F3B9B84C52DB06DAD2ACE1F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
