@@ -15,7 +15,6 @@
 		6C00317A1EC02BCB004C1081 /* ic_lottery3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0031751EC02BCB004C1081 /* ic_lottery3.png */; };
 		6C00317F1EC05438004C1081 /* FGLanguageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C00317E1EC05438004C1081 /* FGLanguageTool.m */; };
 		6C00318C1EC05859004C1081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0031881EC05859004C1081 /* LaunchScreen.storyboard */; };
-		6C00318D1EC05859004C1081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C00318A1EC05859004C1081 /* Main.storyboard */; };
 		6C0031961EC05F63004C1081 /* CustomLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C0031981EC05F63004C1081 /* CustomLocalizable.strings */; };
 		6C07C6571EC0042F0086869E /* typesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C07C6561EC0042F0086869E /* typesModel.m */; };
 		6C07C65B1EC00A7D0086869E /* LotteryControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C07C65A1EC00A7D0086869E /* LotteryControl.m */; };
@@ -28,6 +27,17 @@
 		6C50CFF81EC551C5000D97FC /* ic_physical_footer_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50CFF51EC551C5000D97FC /* ic_physical_footer_btn.png */; };
 		6C50CFF91EC551C5000D97FC /* ic_physical_footer1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50CFF61EC551C5000D97FC /* ic_physical_footer1.png */; };
 		6C50CFFA1EC551C5000D97FC /* ic_physical_footer2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50CFF71EC551C5000D97FC /* ic_physical_footer2.png */; };
+		6C50CFFF1EC55DE1000D97FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C50CFFD1EC55DE1000D97FC /* Main.storyboard */; };
+		6C50D0041EC55E34000D97FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C50D0021EC55E34000D97FC /* Main.storyboard */; };
+		6C50D0171EC5B03E000D97FC /* paramsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C50D0161EC5B03E000D97FC /* paramsModel.m */; };
+		6C50D01A1EC5B65F000D97FC /* verticalLayoutControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C50D0191EC5B65F000D97FC /* verticalLayoutControl.m */; };
+		6C50D0211EC5B6A5000D97FC /* GroupSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C50D01C1EC5B6A5000D97FC /* GroupSettingCell.m */; };
+		6C50D0221EC5B6A5000D97FC /* GroupSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C50D01D1EC5B6A5000D97FC /* GroupSettingCell.xib */; };
+		6C50D0231EC5B6A5000D97FC /* verticalLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C50D01F1EC5B6A5000D97FC /* verticalLayoutCell.m */; };
+		6C50D0241EC5B6A5000D97FC /* verticalLayoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C50D0201EC5B6A5000D97FC /* verticalLayoutCell.xib */; };
+		6C50D02A1EC5B785000D97FC /* LiveVideoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C50D0281EC5B785000D97FC /* LiveVideoCollectionCell.m */; };
+		6C50D02B1EC5B785000D97FC /* LiveVideoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C50D0291EC5B785000D97FC /* LiveVideoCollectionCell.xib */; };
+		6C50D02E1EC5B9A9000D97FC /* LiveFramLayoutControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C50D02D1EC5B9A9000D97FC /* LiveFramLayoutControl.m */; };
 		6C8DBE601EB970A1007C55F1 /* CSNetWorkIngManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE5E1EB970A1007C55F1 /* CSNetWorkIngManager.m */; };
 		6C8DBE691EB97D60007C55F1 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE681EB97D60007C55F1 /* UserModel.m */; };
 		6C8DBE6F1EB98D2E007C55F1 /* MainTabBarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DBE6E1EB98D2E007C55F1 /* MainTabBarControl.m */; };
@@ -101,10 +111,7 @@
 		6C00317D1EC05438004C1081 /* FGLanguageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGLanguageTool.h; sourceTree = "<group>"; };
 		6C00317E1EC05438004C1081 /* FGLanguageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGLanguageTool.m; sourceTree = "<group>"; };
 		6C0031891EC05859004C1081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6C00318B1EC05859004C1081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6C0031911EC058D7004C1081 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		6C0031941EC05F5C004C1081 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		6C0031951EC05F5C004C1081 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6C0031971EC05F63004C1081 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CustomLocalizable.strings"; sourceTree = "<group>"; };
 		6C0031991EC05F64004C1081 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CustomLocalizable.strings; sourceTree = "<group>"; };
 		6C07C6551EC0042F0086869E /* typesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = typesModel.h; sourceTree = "<group>"; };
@@ -122,6 +129,23 @@
 		6C50CFF51EC551C5000D97FC /* ic_physical_footer_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_physical_footer_btn.png; sourceTree = "<group>"; };
 		6C50CFF61EC551C5000D97FC /* ic_physical_footer1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_physical_footer1.png; sourceTree = "<group>"; };
 		6C50CFF71EC551C5000D97FC /* ic_physical_footer2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_physical_footer2.png; sourceTree = "<group>"; };
+		6C50D0011EC55DED000D97FC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		6C50D0031EC55E34000D97FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C50D0151EC5B03E000D97FC /* paramsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paramsModel.h; sourceTree = "<group>"; };
+		6C50D0161EC5B03E000D97FC /* paramsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = paramsModel.m; sourceTree = "<group>"; };
+		6C50D0181EC5B65F000D97FC /* verticalLayoutControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = verticalLayoutControl.h; path = camp/Classes/Control/verticalGameLayout/verticalLayoutControl.h; sourceTree = SOURCE_ROOT; };
+		6C50D0191EC5B65F000D97FC /* verticalLayoutControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = verticalLayoutControl.m; path = camp/Classes/Control/verticalGameLayout/verticalLayoutControl.m; sourceTree = SOURCE_ROOT; };
+		6C50D01B1EC5B6A5000D97FC /* GroupSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupSettingCell.h; path = camp/Classes/View/verticalGameLayout/GroupSettingCell.h; sourceTree = SOURCE_ROOT; };
+		6C50D01C1EC5B6A5000D97FC /* GroupSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupSettingCell.m; path = camp/Classes/View/verticalGameLayout/GroupSettingCell.m; sourceTree = SOURCE_ROOT; };
+		6C50D01D1EC5B6A5000D97FC /* GroupSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupSettingCell.xib; path = camp/Classes/View/verticalGameLayout/GroupSettingCell.xib; sourceTree = SOURCE_ROOT; };
+		6C50D01E1EC5B6A5000D97FC /* verticalLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = verticalLayoutCell.h; path = camp/Classes/View/verticalGameLayout/verticalLayoutCell.h; sourceTree = SOURCE_ROOT; };
+		6C50D01F1EC5B6A5000D97FC /* verticalLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = verticalLayoutCell.m; path = camp/Classes/View/verticalGameLayout/verticalLayoutCell.m; sourceTree = SOURCE_ROOT; };
+		6C50D0201EC5B6A5000D97FC /* verticalLayoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = verticalLayoutCell.xib; path = camp/Classes/View/verticalGameLayout/verticalLayoutCell.xib; sourceTree = SOURCE_ROOT; };
+		6C50D0271EC5B785000D97FC /* LiveVideoCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveVideoCollectionCell.h; sourceTree = "<group>"; };
+		6C50D0281EC5B785000D97FC /* LiveVideoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveVideoCollectionCell.m; sourceTree = "<group>"; };
+		6C50D0291EC5B785000D97FC /* LiveVideoCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveVideoCollectionCell.xib; sourceTree = "<group>"; };
+		6C50D02C1EC5B9A9000D97FC /* LiveFramLayoutControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveFramLayoutControl.h; sourceTree = "<group>"; };
+		6C50D02D1EC5B9A9000D97FC /* LiveFramLayoutControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveFramLayoutControl.m; sourceTree = "<group>"; };
 		6C8DBE5E1EB970A1007C55F1 /* CSNetWorkIngManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNetWorkIngManager.m; sourceTree = "<group>"; };
 		6C8DBE5F1EB970A1007C55F1 /* CSNetWorkIngManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNetWorkIngManager.h; sourceTree = "<group>"; };
 		6C8DBE641EB971D2007C55F1 /* api_Url.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = api_Url.h; sourceTree = "<group>"; };
@@ -295,6 +319,54 @@
 			path = HomeTmpImage;
 			sourceTree = "<group>";
 		};
+		6C50D0051EC567F4000D97FC /* QrCodeControl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QrCodeControl;
+			sourceTree = "<group>";
+		};
+		6C50D0061EC59046000D97FC /* verticalGameLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6C50D0181EC5B65F000D97FC /* verticalLayoutControl.h */,
+				6C50D0191EC5B65F000D97FC /* verticalLayoutControl.m */,
+			);
+			path = verticalGameLayout;
+			sourceTree = "<group>";
+		};
+		6C50D00A1EC597B6000D97FC /* verticalGameLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6C50D01B1EC5B6A5000D97FC /* GroupSettingCell.h */,
+				6C50D01C1EC5B6A5000D97FC /* GroupSettingCell.m */,
+				6C50D01D1EC5B6A5000D97FC /* GroupSettingCell.xib */,
+				6C50D01E1EC5B6A5000D97FC /* verticalLayoutCell.h */,
+				6C50D01F1EC5B6A5000D97FC /* verticalLayoutCell.m */,
+				6C50D0201EC5B6A5000D97FC /* verticalLayoutCell.xib */,
+			);
+			path = verticalGameLayout;
+			sourceTree = "<group>";
+		};
+		6C50D0251EC5B748000D97FC /* LiveVideoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6C50D02C1EC5B9A9000D97FC /* LiveFramLayoutControl.h */,
+				6C50D02D1EC5B9A9000D97FC /* LiveFramLayoutControl.m */,
+			);
+			path = LiveVideoLayout;
+			sourceTree = "<group>";
+		};
+		6C50D0261EC5B75B000D97FC /* LiveVideoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6C50D0271EC5B785000D97FC /* LiveVideoCollectionCell.h */,
+				6C50D0281EC5B785000D97FC /* LiveVideoCollectionCell.m */,
+				6C50D0291EC5B785000D97FC /* LiveVideoCollectionCell.xib */,
+			);
+			path = LiveVideoLayout;
+			sourceTree = "<group>";
+		};
 		6C8DBE651EB97CD6007C55F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +405,8 @@
 				6C8DBE801EB9DD8E007C55F1 /* gameModel.m */,
 				6C07C6551EC0042F0086869E /* typesModel.h */,
 				6C07C6561EC0042F0086869E /* typesModel.m */,
+				6C50D0151EC5B03E000D97FC /* paramsModel.h */,
+				6C50D0161EC5B03E000D97FC /* paramsModel.m */,
 			);
 			path = DataBaseModel;
 			sourceTree = "<group>";
@@ -362,8 +436,9 @@
 		6CB6A4EA1EB834B400FD9895 /* camp */ = {
 			isa = PBXGroup;
 			children = (
+				6C50D0021EC55E34000D97FC /* Main.storyboard */,
 				6C0031881EC05859004C1081 /* LaunchScreen.storyboard */,
-				6C00318A1EC05859004C1081 /* Main.storyboard */,
+				6C50CFFD1EC55DE1000D97FC /* Main.storyboard */,
 				6CD3EC601EB866890037564E /* Category */,
 				6CD3EC491EB842CC0037564E /* Macro */,
 				6CD3EC481EB842630037564E /* reSource */,
@@ -418,7 +493,6 @@
 				6CFD16701EBAD9B000D9C9E1 /* View */,
 				6C8DBE651EB97CD6007C55F1 /* Model */,
 				6CD3EC541EB854130037564E /* Control */,
-				6CD3EC4E1EB8434F0037564E /* storyboad */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -460,17 +534,12 @@
 			path = Macro;
 			sourceTree = "<group>";
 		};
-		6CD3EC4E1EB8434F0037564E /* storyboad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = storyboad;
-			path = stroyboad;
-			sourceTree = "<group>";
-		};
 		6CD3EC541EB854130037564E /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				6C50D0251EC5B748000D97FC /* LiveVideoLayout */,
+				6C50D0061EC59046000D97FC /* verticalGameLayout */,
+				6C50D0051EC567F4000D97FC /* QrCodeControl */,
 				6C07C6581EC00A470086869E /* Lottery */,
 				6CD9B8221EBC63B2001F5373 /* LiveVideo */,
 				6CFD16691EBAC1ED00D9C9E1 /* BaseControl */,
@@ -659,6 +728,8 @@
 		6CFD16701EBAD9B000D9C9E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6C50D0261EC5B75B000D97FC /* LiveVideoLayout */,
+				6C50D00A1EC597B6000D97FC /* verticalGameLayout */,
 				6C07C6631EC010790086869E /* Lottery */,
 				6CD9B8261EBC670D001F5373 /* LiveVideo */,
 				6CFD16711EBAD9D400D9C9E1 /* ElectronicGame */,
@@ -796,11 +867,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C0031761EC02BCB004C1081 /* ic_lottery0.png in Resources */,
+				6C50CFFF1EC55DE1000D97FC /* Main.storyboard in Resources */,
 				6C50CFF91EC551C5000D97FC /* ic_physical_footer1.png in Resources */,
 				6CD9B83A1EBC68D9001F5373 /* ic_video_pic5.jpg in Resources */,
 				6CD9B8381EBC68D9001F5373 /* ic_video_pic3.jpg in Resources */,
 				6CD9B8391EBC68D9001F5373 /* ic_video_pic4.jpg in Resources */,
 				6C07C6601EC00BD40086869E /* ic_banner1.png in Resources */,
+				6C50D0041EC55E34000D97FC /* Main.storyboard in Resources */,
 				6C0031961EC05F63004C1081 /* CustomLocalizable.strings in Resources */,
 				6CD9B83B1EBC68D9001F5373 /* ic_video_pic6.jpg in Resources */,
 				6C00318C1EC05859004C1081 /* LaunchScreen.storyboard in Resources */,
@@ -809,17 +882,19 @@
 				6C07C6611EC00BD40086869E /* ic_banner2.png in Resources */,
 				6C50CFF81EC551C5000D97FC /* ic_physical_footer_btn.png in Resources */,
 				6CEB31A91EBC281100A95344 /* GameCell.xib in Resources */,
+				6C50D02B1EC5B785000D97FC /* LiveVideoCollectionCell.xib in Resources */,
 				6CD9B8361EBC68D9001F5373 /* ic_video_pic1.jpg in Resources */,
-				6C00318D1EC05859004C1081 /* Main.storyboard in Resources */,
 				6C0031781EC02BCB004C1081 /* ic_lottery4.png in Resources */,
 				6CD3EC4B1EB843130037564E /* Assets.xcassets in Resources */,
 				6CD9B8471EBC8048001F5373 /* PopContentTableCell.xib in Resources */,
 				6C07C6621EC00BD40086869E /* ic_banner3.png in Resources */,
 				6CD9B8371EBC68D9001F5373 /* ic_video_pic2.jpg in Resources */,
+				6C50D0221EC5B6A5000D97FC /* GroupSettingCell.xib in Resources */,
 				6C0031771EC02BCB004C1081 /* ic_lottery2.png in Resources */,
 				6C0031791EC02BCB004C1081 /* ic_lottery1.png in Resources */,
 				6C00317A1EC02BCB004C1081 /* ic_lottery3.png in Resources */,
 				6C50CFFA1EC551C5000D97FC /* ic_physical_footer2.png in Resources */,
+				6C50D0241EC5B6A5000D97FC /* verticalLayoutCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -895,16 +970,21 @@
 				6CD3EC891EB87D940037564E /* CLLockInfoView.m in Sources */,
 				6CD3EC861EB87D940037564E /* CALayer+Anim.m in Sources */,
 				6CD3EC691EB869510037564E /* CALayer+SetBorder.m in Sources */,
+				6C50D01A1EC5B65F000D97FC /* verticalLayoutControl.m in Sources */,
 				6CD3EC961EB87DA60037564E /* NSString+File.m in Sources */,
 				6CD3EC971EB87DA60037564E /* CoreArchive.m in Sources */,
 				6C07C6661EC010EE0086869E /* CustomGroupView.m in Sources */,
+				6C50D0211EC5B6A5000D97FC /* GroupSettingCell.m in Sources */,
+				6C50D02A1EC5B785000D97FC /* LiveVideoCollectionCell.m in Sources */,
 				6CFD166F1EBAC27500D9C9E1 /* ElectronicGameControl.m in Sources */,
 				6C00317F1EC05438004C1081 /* FGLanguageTool.m in Sources */,
 				6C8DBE7E1EB9D22B007C55F1 /* gameGroupModel.m in Sources */,
 				6CD3EC451EB841EC0037564E /* AppDelegate.m in Sources */,
 				6CD3EC9A1EB87ED60037564E /* CLLockVC.m in Sources */,
 				6CD3EC5A1EB85DBB0037564E /* LoginController.m in Sources */,
+				6C50D02E1EC5B9A9000D97FC /* LiveFramLayoutControl.m in Sources */,
 				6C00316F1EC02420004C1081 /* UIView+additional.m in Sources */,
+				6C50D0231EC5B6A5000D97FC /* verticalLayoutCell.m in Sources */,
 				6CFD16791EBADBA300D9C9E1 /* GameElectronicMenu.m in Sources */,
 				6C8DBE691EB97D60007C55F1 /* UserModel.m in Sources */,
 				6CD3EC5D1EB85FFC0037564E /* camp.xcdatamodeld in Sources */,
@@ -912,6 +992,7 @@
 				6CB6A4ED1EB834B400FD9895 /* main.m in Sources */,
 				6CD9B8421EBC7887001F5373 /* PopContentView.m in Sources */,
 				6CEB31A81EBC281100A95344 /* GameCell.m in Sources */,
+				6C50D0171EC5B03E000D97FC /* paramsModel.m in Sources */,
 				6C50CFF21EC55102000D97FC /* sportsGameCell.m in Sources */,
 				6CD9B8251EBC63F4001F5373 /* LiveVideoControl.m in Sources */,
 				6C8DBE811EB9DD8E007C55F1 /* gameModel.m in Sources */,
@@ -972,16 +1053,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		6C00318A1EC05859004C1081 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C00318B1EC05859004C1081 /* Base */,
-				6C0031911EC058D7004C1081 /* en */,
-				6C0031951EC05F5C004C1081 /* zh-Hans */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6C0031981EC05F63004C1081 /* CustomLocalizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -989,6 +1060,22 @@
 				6C0031991EC05F64004C1081 /* en */,
 			);
 			name = CustomLocalizable.strings;
+			sourceTree = "<group>";
+		};
+		6C50CFFD1EC55DE1000D97FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C50D0011EC55DED000D97FC /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C50D0021EC55E34000D97FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C50D0031EC55E34000D97FC /* en */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -35,6 +35,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    self.userNameTxt.borderWhich = ZJViewBorderBottom;
+//    self.passWordTxt.borderWhich = ZJViewBorderBottom;
+    
     [self Basiclayout];
     [self UpdatePageLanguage];
     /* 发送本地通知更新界面 */
@@ -71,6 +74,12 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     if(![[persistenceData valueForKey:PD_IsRememberAccount] boolValue]) return;
     [persistenceData setValue:textField.text forKey:PD_Account];
+}
+
+#pragma mark - 扫描二维码注册
+- (IBAction)QrcodeRegister:(id)sender{
+    /** 打开扫描 */
+    
 }
 
 #pragma mark - Login - 登录

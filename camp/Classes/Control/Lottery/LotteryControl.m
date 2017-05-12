@@ -26,7 +26,6 @@
     [super viewDidLoad];
     
     
-    
     /* 加载本地Banner图 */
     [self.sdCycView setLocalizationImageNamesGroup:@[[UIImage imageNamed:@"ic_banner1"],[UIImage imageNamed:@"ic_banner2"],[UIImage imageNamed:@"ic_banner3"]]];
     /* 注册Cell */

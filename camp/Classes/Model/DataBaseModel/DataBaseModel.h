@@ -10,6 +10,7 @@
 @class gameGroupModel;
 @class gameModel;
 @class typesModel;
+@class paramsModel;
 @interface DataBaseModel : NSObject<NSCoding>
 
 /* 游戏分组 */
@@ -20,6 +21,9 @@
 
 /* 所有游戏*/
 @property (nonatomic, strong) NSMutableDictionary <NSString *,NSArray<gameModel *> *> *games;
+
+
+@property (nonatomic,strong) NSMutableDictionary <NSString *,paramsModel *>* params;
 
 /* 最新版本号 */
 @property (nonatomic, copy) NSString *version;

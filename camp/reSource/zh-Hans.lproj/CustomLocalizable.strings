@@ -22,8 +22,8 @@
 
 
 /* 登陆界面 */
-"account_name" = "账号:";
-"password_name" = "密码:";
+"account_name" = "用户名:";
+"password_name" = "密    码:";
 "login_btn" = "登陆";
 "rememberAccout" =  "记住账号";
-"gesturesLogin" = "手势登陆";
+"gesturesLogin" = "切换手势密码登陆";

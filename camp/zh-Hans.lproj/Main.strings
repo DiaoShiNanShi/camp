@@ -14,14 +14,14 @@
 /* Class = "UINavigationItem"; title = "真人视讯"; ObjectID = "BWe-1p-WL8"; */
 "BWe-1p-WL8.title" = "真人视讯";
 
-/* Class = "UILabel"; text = "密码:"; ObjectID = "CkB-S2-Yjm"; */
-"CkB-S2-Yjm.text" = "密码:";
+/* Class = "UILabel"; text = "密    码:"; ObjectID = "CkB-S2-Yjm"; */
+"CkB-S2-Yjm.text" = "密    码:";
 
 /* Class = "UIButton"; normalTitle = "进入游戏"; ObjectID = "CvB-1y-D1i"; */
 "CvB-1y-D1i.normalTitle" = "进入游戏";
 
-/* Class = "UILabel"; text = "账号:"; ObjectID = "FYY-n6-ck3"; */
-"FYY-n6-ck3.text" = "账号:";
+/* Class = "UILabel"; text = "用户名:"; ObjectID = "FYY-n6-ck3"; */
+"FYY-n6-ck3.text" = "用户名:";
 
 /* Class = "UIButton"; normalTitle = "忘记密码？"; ObjectID = "GzO-x3-we5"; */
 "GzO-x3-we5.normalTitle" = "忘记密码？";
@@ -38,11 +38,17 @@
 /* Class = "UIButton"; normalTitle = "登陆"; ObjectID = "jtr-VL-Ufg"; */
 "jtr-VL-Ufg.normalTitle" = "登陆";
 
-/* Class = "UIButton"; normalTitle = "搜索"; ObjectID = "rfJ-8Q-Jxy"; */
-"rfJ-8Q-Jxy.normalTitle" = "搜索";
+/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "rfJ-8Q-Jxy"; */
+"rfJ-8Q-Jxy.normalTitle" = "确定";
+
+/* Class = "UITextField"; placeholder = "请输入密码"; ObjectID = "rfk-pc-bj8"; */
+"rfk-pc-bj8.placeholder" = "请输入密码";
 
 /* Class = "UIButton"; normalTitle = "记住账号"; ObjectID = "tLZ-EC-Jxc"; */
 "tLZ-EC-Jxc.normalTitle" = "记住账号";
+
+/* Class = "UITextField"; placeholder = "请输入用户名"; ObjectID = "ukX-vG-KgD"; */
+"ukX-vG-KgD.placeholder" = "请输入用户名";
 
 /* Class = "UIButton"; normalTitle = "手势登陆"; ObjectID = "uzN-gN-QTh"; */
 "uzN-gN-QTh.normalTitle" = "手势登陆";

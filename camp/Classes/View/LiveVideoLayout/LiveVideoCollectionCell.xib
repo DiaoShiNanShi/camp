@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LiveVideoCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="278"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="165" height="278"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FE8-4d-hfw">
+                        <rect key="frame" x="17.5" y="38" width="130" height="202"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="202" id="OHU-9G-QMN"/>
+                            <constraint firstAttribute="width" constant="130" id="pNX-hz-9Di"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="边框" translatesAutoresizingMaskIntoConstraints="NO" id="5mO-CT-m9X">
+                        <rect key="frame" x="12.5" y="33" width="140" height="212"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="212" id="6IT-gj-Hg4"/>
+                            <constraint firstAttribute="width" constant="140" id="oqL-ni-n8A"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.058823529411764705" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="5mO-CT-m9X" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="AAw-os-xn3"/>
+                <constraint firstItem="FE8-4d-hfw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Eep-KC-pht"/>
+                <constraint firstItem="5mO-CT-m9X" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ka3-DU-bqe"/>
+                <constraint firstItem="FE8-4d-hfw" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Nfr-y6-4Y6"/>
+            </constraints>
+            <size key="customSize" width="165" height="278"/>
+            <connections>
+                <outlet property="icon" destination="FE8-4d-hfw" id="cr4-f8-wiD"/>
+            </connections>
+            <point key="canvasLocation" x="96" y="-139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="边框" width="140" height="212"/>
+    </resources>
+</document>
