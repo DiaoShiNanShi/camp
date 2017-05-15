@@ -12,6 +12,9 @@
 {
     CAGradientLayer *lineLayer;
     CALayer *verticalLine;
+    
+    
+    NSMutableArray *JSbtnArray;
 }
 
 @end
@@ -30,6 +33,7 @@
     NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
     DataBaseModel* dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
     
+    JSbtnArray = [NSMutableArray arrayWithCapacity:dataBase.types.count];
     float width = kScreenWidth / 2;
     float height = kScreenWidth / 4;
     float y = 0.0;
@@ -46,12 +50,16 @@
         [JsBtn setTitle:@"极速盘" forState:UIControlStateNormal];
         [JsBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         JsBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+        JsBtn.tag = i;
+        [JsBtn addTarget:view_ action:@selector(JsButton:) forControlEvents:UIControlEventTouchUpInside];
         
         UIButton *BzBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [BzBtn setFrame:CGRectMake(width/2, height/2, height, height/2)];
         [BzBtn setTitle:@"标准盘" forState:UIControlStateNormal];
         [BzBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         BzBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+        BzBtn.tag = i;
+        [BzBtn addTarget:view_ action:@selector(BzButton:) forControlEvents:UIControlEventTouchUpInside];
         
         UILabel *groupName = [[UILabel alloc] init];
         [groupName setFrame:CGRectMake(0, height - 15, height, 10)];
@@ -84,10 +92,23 @@
         [view_ addSubview:groupName];
         [view_ addSubview:icon];
         
+        [JSbtnArray addObject:JsBtn];
         [self addSubview:view_];
     }
     self.returnSelfHeight = ^float{
         return y +  height;
     };
+}
+- (void)JsButton:(UIButton *)sender{
+    if(!self.PushToJsPage)return;
+    NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
+    DataBaseModel* dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
+    self.PushToJsPage([dataBase.types[sender.tag].client_Cache_Type[@"id"] integerValue]);
+}
+- (void)BzButton:(UIButton *)sender{
+    if(!self.PushToBzPage)return;
+    NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
+    DataBaseModel* dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
+    self.PushToBzPage([dataBase.types[sender.tag].client_Cache_Type[@"id"] integerValue]);
 }
 @end

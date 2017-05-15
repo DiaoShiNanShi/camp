@@ -41,6 +41,18 @@
                 [types_ addObject:[typesModel mj_objectWithKeyValues:item]];
             }
             [super setValue:types_ forKey:key];
+        }else if([key isEqualToString:@"items"])
+        {
+            self.items = [NSMutableDictionary dictionary];
+            [value enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                NSMutableArray<quotationInfoModel *> *gameArray_ = [NSMutableArray arrayWithCapacity:[obj count]];
+                for (NSDictionary *item in obj) {
+                    quotationInfoModel *model_ = [quotationInfoModel mj_objectWithKeyValues:item];
+                    [gameArray_ addObject:model_];
+                }
+                [self.items setValue:gameArray_ forKey:key];
+            }];
+            
         }else{
             [super setValue:value forKey:key];
         }
@@ -56,6 +68,7 @@
     [aCoder encodeObject:_version forKey:@"version"];
     [aCoder encodeObject:_types forKey:@"types"];
     [aCoder encodeObject:_params forKey:@"params"];
+    [aCoder encodeObject:_items forKey:@"items"];
 }
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
@@ -65,6 +78,7 @@
         self.version = [aDecoder decodeObjectForKey:@"version"];
         self.types = [aDecoder decodeObjectForKey:@"types"];
         self.params = [aDecoder decodeObjectForKey:@"params"];
+        self.items = [aDecoder decodeObjectForKey:@"items"];
     }
     return self;
 }

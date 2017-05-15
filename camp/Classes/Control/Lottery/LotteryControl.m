@@ -31,6 +31,15 @@
     /* 注册Cell */
     [self.table registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     [self.table registerNib:[UINib nibWithNibName:@"sportsGameCell" bundle:nil] forCellReuseIdentifier:NSStringFromClass([sportsGameCell class])];
+    
+    /* customView 点击回调 */
+    _customView.PushToJsPage = ^(NSInteger pageId) {
+        NSLog(@"");
+    };
+    _customView.PushToBzPage = ^(NSInteger pageId) {
+        NSLog(@"");
+    };
+    
 }
 - (void)updateLanguage{
     self.title = CustomStr(@"tabbar_lottery")
@@ -46,6 +55,7 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
         [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         [cell.contentView addSubview:_customView];
+        _customView.frame = CGRectMake(0, 0, kScreenWidth, self.customView.returnSelfHeight());
         [cell.contentView setBackgroundColor:RGBACOLOR(15, 15, 15, 1)];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;

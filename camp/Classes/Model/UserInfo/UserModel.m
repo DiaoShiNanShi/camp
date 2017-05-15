@@ -21,7 +21,7 @@
         self.email = [aDecoder decodeObjectForKey:@"email"];
         self.enable = [[aDecoder decodeObjectForKey:@"enable"] integerValue];
         self.fanDian = [[aDecoder decodeObjectForKey:@"fanDian"] integerValue];
-        self.fcoin = [[aDecoder decodeObjectForKey:@"fcoin"] integerValue];
+        self.fcoin = [[aDecoder decodeObjectForKey:@"fcoin"] floatValue];
         self.flight = [[aDecoder decodeObjectForKey:@"flight"] integerValue];
         self.flightAmount = [[aDecoder decodeObjectForKey:@"flightAmount"] integerValue];
         self.grade = [[aDecoder decodeObjectForKey:@"grade"] integerValue];
@@ -43,7 +43,7 @@
         self.regIP = [aDecoder decodeObjectForKey:@"regIP"];
         self.regTime = [aDecoder decodeObjectForKey:@"regTime"];
         self.score = [[aDecoder decodeObjectForKey:@"score"] integerValue];
-        self.scoreTotal = [[aDecoder decodeObjectForKey:@"scoreTotal"] integerValue];
+        self.scoreTotal = [[aDecoder decodeObjectForKey:@"scoreTotal"] floatValue];
         self.src = [aDecoder decodeObjectForKey:@"src"];
         self.tel = [aDecoder decodeObjectForKey:@"tel"];
         self.thirdStatus = [aDecoder decodeObjectForKey:@"thirdStatus"];

@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.tabBar setBarTintColor:RGBACOLOR(12, 12, 12, 1)];
+    [self.tabBar setBarTintColor:RGBACOLOR(15, 15, 15, 1)];
     self.tabBar.tintColor  = RGBACOLOR(233, 197, 123, 1);
     /* 解档数据 */
     NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
@@ -29,7 +29,7 @@
         // verticalLayoutControlID
         NSMutableArray *arr = [NSMutableArray arrayWithArray:self.childViewControllers];
         verticalLayoutControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:@"verticalLayoutControlID"];
-        UINavigationController *_Vc_Nav = [[UINavigationController alloc] initWithRootViewController:Vc];
+        CampBaseNavigationController *_Vc_Nav = [[CampBaseNavigationController alloc] initWithRootViewController:Vc];
         _Vc_Nav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"电子游戏" image:[UIImage imageNamed:@"电子游戏"] selectedImage:[UIImage imageNamed:@"电子游戏"]];
         [arr replaceObjectAtIndex:2 withObject:_Vc_Nav];
         [self setValue:arr forKey:@"childViewControllers"];
@@ -39,7 +39,7 @@
         // LiveFramLayoutControlID
         NSMutableArray *arr = [NSMutableArray arrayWithArray:self.childViewControllers];
         LiveFramLayoutControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:@"LiveFramLayoutControlID"];
-        UINavigationController *_Vc_Nav = [[UINavigationController alloc] initWithRootViewController:Vc];
+        CampBaseNavigationController *_Vc_Nav = [[CampBaseNavigationController alloc] initWithRootViewController:Vc];
         _Vc_Nav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"真人视频" image:[UIImage imageNamed:@"真人视频"] selectedImage:[UIImage imageNamed:@"真人视频"]];
         [arr replaceObjectAtIndex:1 withObject:_Vc_Nav];
         [self setValue:arr forKey:@"childViewControllers"];

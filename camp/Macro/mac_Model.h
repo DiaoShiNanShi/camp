@@ -15,5 +15,6 @@
 #import "gameModel.h"
 #import "typesModel.h"
 #import "paramsModel.h"
+#import "quotationInfoModel.h"
 
 #endif /* mac_Model_h */

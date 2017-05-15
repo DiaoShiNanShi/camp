@@ -11,4 +11,7 @@
 @interface CustomGroupView : UIView
 
 @property (nonatomic, copy) float (^returnSelfHeight)();
+
+@property (nonatomic, copy) void (^PushToJsPage)(NSInteger pageId);
+@property (nonatomic, copy) void (^PushToBzPage)(NSInteger pageId);
 @end

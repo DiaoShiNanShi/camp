@@ -18,7 +18,7 @@
 @property (copy, nonatomic) NSString *email;
 @property (assign, nonatomic) NSInteger enable;
 @property (assign, nonatomic) NSInteger fanDian;
-@property (assign, nonatomic) NSInteger fcoin;
+@property (assign, nonatomic) float fcoin;
 @property (assign, nonatomic) NSInteger flight;
 @property (assign, nonatomic) NSInteger flightAmount;
 @property (assign, nonatomic) NSInteger grade;
@@ -40,7 +40,7 @@
 @property (copy, nonatomic) NSString *regIP;
 @property (copy, nonatomic) NSString *regTime;
 @property (assign, nonatomic) NSInteger score;
-@property (assign, nonatomic) NSInteger scoreTotal;
+@property (assign, nonatomic) float scoreTotal;
 @property (copy, nonatomic) NSString *services;
 @property (copy, nonatomic) NSString *src;
 @property (copy, nonatomic) NSString *tel;

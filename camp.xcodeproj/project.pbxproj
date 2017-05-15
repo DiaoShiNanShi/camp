@@ -22,6 +22,18 @@
 		6C07C6611EC00BD40086869E /* ic_banner2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C07C65E1EC00BD40086869E /* ic_banner2.png */; };
 		6C07C6621EC00BD40086869E /* ic_banner3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C07C65F1EC00BD40086869E /* ic_banner3.png */; };
 		6C07C6661EC010EE0086869E /* CustomGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C07C6651EC010EE0086869E /* CustomGroupView.m */; };
+		6C34BF051EC93B0600E65C3E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C34BF041EC93B0600E65C3E /* Info.plist */; };
+		6C34BF091EC93BCB00E65C3E /* MyAccountControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C34BF081EC93BCB00E65C3E /* MyAccountControl.m */; };
+		6C34BF0E1EC93DC900E65C3E /* MyAccountHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C34BF0C1EC93DC900E65C3E /* MyAccountHeaderCell.m */; };
+		6C34BF0F1EC93DC900E65C3E /* MyAccountHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C34BF0D1EC93DC900E65C3E /* MyAccountHeaderCell.xib */; };
+		6C34BF131EC93EE700E65C3E /* MyAccountSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C34BF111EC93EE600E65C3E /* MyAccountSettingCell.m */; };
+		6C34BF141EC93EE700E65C3E /* MyAccountSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C34BF121EC93EE700E65C3E /* MyAccountSettingCell.xib */; };
+		6C34BF181EC9564600E65C3E /* LogOutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C34BF161EC9564600E65C3E /* LogOutCell.m */; };
+		6C34BF191EC9564600E65C3E /* LogOutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C34BF171EC9564600E65C3E /* LogOutCell.xib */; };
+		6C34BF1C1EC95B5900E65C3E /* RechargeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C34BF1B1EC95B5900E65C3E /* RechargeControl.m */; };
+		6C34BF1F1EC95FEA00E65C3E /* CampBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C34BF1E1EC95FEA00E65C3E /* CampBaseNavigationController.m */; };
+		6C34BF241EC9894400E65C3E /* shortcutRechargeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C34BF231EC9894400E65C3E /* shortcutRechargeCell.m */; };
+		6C34BF271EC9AC1C00E65C3E /* quotationInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C34BF261EC9AC1C00E65C3E /* quotationInfoModel.m */; };
 		6C50CFF21EC55102000D97FC /* sportsGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C50CFF01EC55102000D97FC /* sportsGameCell.m */; };
 		6C50CFF31EC55102000D97FC /* sportsGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C50CFF11EC55102000D97FC /* sportsGameCell.xib */; };
 		6C50CFF81EC551C5000D97FC /* ic_physical_footer_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50CFF51EC551C5000D97FC /* ic_physical_footer_btn.png */; };
@@ -51,7 +63,6 @@
 		6CD3EC4B1EB843130037564E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CD3EC4A1EB843130037564E /* Assets.xcassets */; };
 		6CD3EC5A1EB85DBB0037564E /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC591EB85DBB0037564E /* LoginController.m */; };
 		6CD3EC5D1EB85FFC0037564E /* camp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC5B1EB85FFC0037564E /* camp.xcdatamodeld */; };
-		6CD3EC5F1EB860370037564E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CD3EC5E1EB860370037564E /* Info.plist */; };
 		6CD3EC691EB869510037564E /* CALayer+SetBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC681EB869510037564E /* CALayer+SetBorder.m */; };
 		6CD3EC861EB87D940037564E /* CALayer+Anim.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC741EB87D940037564E /* CALayer+Anim.m */; };
 		6CD3EC871EB87D940037564E /* CoreLockConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EC771EB87D940037564E /* CoreLockConst.m */; };
@@ -123,6 +134,26 @@
 		6C07C65F1EC00BD40086869E /* ic_banner3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_banner3.png; sourceTree = "<group>"; };
 		6C07C6641EC010EE0086869E /* CustomGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomGroupView.h; sourceTree = "<group>"; };
 		6C07C6651EC010EE0086869E /* CustomGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomGroupView.m; sourceTree = "<group>"; };
+		6C34BF041EC93B0600E65C3E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C34BF071EC93BCB00E65C3E /* MyAccountControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountControl.h; sourceTree = "<group>"; };
+		6C34BF081EC93BCB00E65C3E /* MyAccountControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountControl.m; sourceTree = "<group>"; };
+		6C34BF0B1EC93DC900E65C3E /* MyAccountHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountHeaderCell.h; sourceTree = "<group>"; };
+		6C34BF0C1EC93DC900E65C3E /* MyAccountHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountHeaderCell.m; sourceTree = "<group>"; };
+		6C34BF0D1EC93DC900E65C3E /* MyAccountHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountHeaderCell.xib; sourceTree = "<group>"; };
+		6C34BF101EC93EE600E65C3E /* MyAccountSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountSettingCell.h; sourceTree = "<group>"; };
+		6C34BF111EC93EE600E65C3E /* MyAccountSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountSettingCell.m; sourceTree = "<group>"; };
+		6C34BF121EC93EE700E65C3E /* MyAccountSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountSettingCell.xib; sourceTree = "<group>"; };
+		6C34BF151EC9564600E65C3E /* LogOutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogOutCell.h; sourceTree = "<group>"; };
+		6C34BF161EC9564600E65C3E /* LogOutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogOutCell.m; sourceTree = "<group>"; };
+		6C34BF171EC9564600E65C3E /* LogOutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogOutCell.xib; sourceTree = "<group>"; };
+		6C34BF1A1EC95B5900E65C3E /* RechargeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeControl.h; sourceTree = "<group>"; };
+		6C34BF1B1EC95B5900E65C3E /* RechargeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeControl.m; sourceTree = "<group>"; };
+		6C34BF1D1EC95FEA00E65C3E /* CampBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampBaseNavigationController.h; sourceTree = "<group>"; };
+		6C34BF1E1EC95FEA00E65C3E /* CampBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampBaseNavigationController.m; sourceTree = "<group>"; };
+		6C34BF221EC9894400E65C3E /* shortcutRechargeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shortcutRechargeCell.h; sourceTree = "<group>"; };
+		6C34BF231EC9894400E65C3E /* shortcutRechargeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shortcutRechargeCell.m; sourceTree = "<group>"; };
+		6C34BF251EC9AC1C00E65C3E /* quotationInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quotationInfoModel.h; sourceTree = "<group>"; };
+		6C34BF261EC9AC1C00E65C3E /* quotationInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = quotationInfoModel.m; sourceTree = "<group>"; };
 		6C50CFEF1EC55102000D97FC /* sportsGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sportsGameCell.h; sourceTree = "<group>"; };
 		6C50CFF01EC55102000D97FC /* sportsGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sportsGameCell.m; sourceTree = "<group>"; };
 		6C50CFF11EC55102000D97FC /* sportsGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sportsGameCell.xib; sourceTree = "<group>"; };
@@ -176,7 +207,6 @@
 		6CD3EC581EB85DBB0037564E /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		6CD3EC591EB85DBB0037564E /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		6CD3EC5C1EB85FFC0037564E /* camp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = camp.xcdatamodel; sourceTree = "<group>"; };
-		6CD3EC5E1EB860370037564E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CD3EC671EB869510037564E /* CALayer+SetBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+SetBorder.h"; sourceTree = "<group>"; };
 		6CD3EC681EB869510037564E /* CALayer+SetBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+SetBorder.m"; sourceTree = "<group>"; };
 		6CD3EC731EB87D940037564E /* CALayer+Anim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Anim.h"; sourceTree = "<group>"; };
@@ -309,6 +339,35 @@
 			path = Lottery;
 			sourceTree = "<group>";
 		};
+		6C34BF061EC93B9F00E65C3E /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				6C34BF071EC93BCB00E65C3E /* MyAccountControl.h */,
+				6C34BF081EC93BCB00E65C3E /* MyAccountControl.m */,
+				6C34BF1A1EC95B5900E65C3E /* RechargeControl.h */,
+				6C34BF1B1EC95B5900E65C3E /* RechargeControl.m */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
+		6C34BF0A1EC93DA500E65C3E /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				6C34BF0B1EC93DC900E65C3E /* MyAccountHeaderCell.h */,
+				6C34BF0C1EC93DC900E65C3E /* MyAccountHeaderCell.m */,
+				6C34BF0D1EC93DC900E65C3E /* MyAccountHeaderCell.xib */,
+				6C34BF101EC93EE600E65C3E /* MyAccountSettingCell.h */,
+				6C34BF111EC93EE600E65C3E /* MyAccountSettingCell.m */,
+				6C34BF121EC93EE700E65C3E /* MyAccountSettingCell.xib */,
+				6C34BF151EC9564600E65C3E /* LogOutCell.h */,
+				6C34BF161EC9564600E65C3E /* LogOutCell.m */,
+				6C34BF171EC9564600E65C3E /* LogOutCell.xib */,
+				6C34BF221EC9894400E65C3E /* shortcutRechargeCell.h */,
+				6C34BF231EC9894400E65C3E /* shortcutRechargeCell.m */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
 		6C50CFF41EC55195000D97FC /* HomeTmpImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +466,8 @@
 				6C07C6561EC0042F0086869E /* typesModel.m */,
 				6C50D0151EC5B03E000D97FC /* paramsModel.h */,
 				6C50D0161EC5B03E000D97FC /* paramsModel.m */,
+				6C34BF251EC9AC1C00E65C3E /* quotationInfoModel.h */,
+				6C34BF261EC9AC1C00E65C3E /* quotationInfoModel.m */,
 			);
 			path = DataBaseModel;
 			sourceTree = "<group>";
@@ -515,9 +576,9 @@
 				6CD9B83C1EBC76D7001F5373 /* KLCPopup */,
 				6CD9B82F1EBC689F001F5373 /* ic_Video_pic */,
 				6CD3EC6C1EB878890037564E /* GestureLock */,
-				6CD3EC5E1EB860370037564E /* Info.plist */,
 				6CD3EC5B1EB85FFC0037564E /* camp.xcdatamodeld */,
 				6CD3EC4A1EB843130037564E /* Assets.xcassets */,
+				6C34BF041EC93B0600E65C3E /* Info.plist */,
 				6C0031981EC05F63004C1081 /* CustomLocalizable.strings */,
 			);
 			path = reSource;
@@ -537,6 +598,7 @@
 		6CD3EC541EB854130037564E /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				6C34BF061EC93B9F00E65C3E /* MyAccount */,
 				6C50D0251EC5B748000D97FC /* LiveVideoLayout */,
 				6C50D0061EC59046000D97FC /* verticalGameLayout */,
 				6C50D0051EC567F4000D97FC /* QrCodeControl */,
@@ -721,6 +783,8 @@
 			children = (
 				6CFD166A1EBAC21900D9C9E1 /* CampBaseControl.h */,
 				6CFD166B1EBAC21900D9C9E1 /* CampBaseControl.m */,
+				6C34BF1D1EC95FEA00E65C3E /* CampBaseNavigationController.h */,
+				6C34BF1E1EC95FEA00E65C3E /* CampBaseNavigationController.m */,
 			);
 			path = BaseControl;
 			sourceTree = "<group>";
@@ -728,6 +792,7 @@
 		6CFD16701EBAD9B000D9C9E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6C34BF0A1EC93DA500E65C3E /* MyAccount */,
 				6C50D0261EC5B75B000D97FC /* LiveVideoLayout */,
 				6C50D00A1EC597B6000D97FC /* verticalGameLayout */,
 				6C07C6631EC010790086869E /* Lottery */,
@@ -878,11 +943,12 @@
 				6CD9B83B1EBC68D9001F5373 /* ic_video_pic6.jpg in Resources */,
 				6C00318C1EC05859004C1081 /* LaunchScreen.storyboard in Resources */,
 				6C50CFF31EC55102000D97FC /* sportsGameCell.xib in Resources */,
-				6CD3EC5F1EB860370037564E /* Info.plist in Resources */,
 				6C07C6611EC00BD40086869E /* ic_banner2.png in Resources */,
 				6C50CFF81EC551C5000D97FC /* ic_physical_footer_btn.png in Resources */,
 				6CEB31A91EBC281100A95344 /* GameCell.xib in Resources */,
 				6C50D02B1EC5B785000D97FC /* LiveVideoCollectionCell.xib in Resources */,
+				6C34BF051EC93B0600E65C3E /* Info.plist in Resources */,
+				6C34BF141EC93EE700E65C3E /* MyAccountSettingCell.xib in Resources */,
 				6CD9B8361EBC68D9001F5373 /* ic_video_pic1.jpg in Resources */,
 				6C0031781EC02BCB004C1081 /* ic_lottery4.png in Resources */,
 				6CD3EC4B1EB843130037564E /* Assets.xcassets in Resources */,
@@ -890,10 +956,12 @@
 				6C07C6621EC00BD40086869E /* ic_banner3.png in Resources */,
 				6CD9B8371EBC68D9001F5373 /* ic_video_pic2.jpg in Resources */,
 				6C50D0221EC5B6A5000D97FC /* GroupSettingCell.xib in Resources */,
+				6C34BF191EC9564600E65C3E /* LogOutCell.xib in Resources */,
 				6C0031771EC02BCB004C1081 /* ic_lottery2.png in Resources */,
 				6C0031791EC02BCB004C1081 /* ic_lottery1.png in Resources */,
 				6C00317A1EC02BCB004C1081 /* ic_lottery3.png in Resources */,
 				6C50CFFA1EC551C5000D97FC /* ic_physical_footer2.png in Resources */,
+				6C34BF0F1EC93DC900E65C3E /* MyAccountHeaderCell.xib in Resources */,
 				6C50D0241EC5B6A5000D97FC /* verticalLayoutCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -972,10 +1040,12 @@
 				6CD3EC691EB869510037564E /* CALayer+SetBorder.m in Sources */,
 				6C50D01A1EC5B65F000D97FC /* verticalLayoutControl.m in Sources */,
 				6CD3EC961EB87DA60037564E /* NSString+File.m in Sources */,
+				6C34BF131EC93EE700E65C3E /* MyAccountSettingCell.m in Sources */,
 				6CD3EC971EB87DA60037564E /* CoreArchive.m in Sources */,
 				6C07C6661EC010EE0086869E /* CustomGroupView.m in Sources */,
 				6C50D0211EC5B6A5000D97FC /* GroupSettingCell.m in Sources */,
 				6C50D02A1EC5B785000D97FC /* LiveVideoCollectionCell.m in Sources */,
+				6C34BF241EC9894400E65C3E /* shortcutRechargeCell.m in Sources */,
 				6CFD166F1EBAC27500D9C9E1 /* ElectronicGameControl.m in Sources */,
 				6C00317F1EC05438004C1081 /* FGLanguageTool.m in Sources */,
 				6C8DBE7E1EB9D22B007C55F1 /* gameGroupModel.m in Sources */,
@@ -984,9 +1054,11 @@
 				6CD3EC5A1EB85DBB0037564E /* LoginController.m in Sources */,
 				6C50D02E1EC5B9A9000D97FC /* LiveFramLayoutControl.m in Sources */,
 				6C00316F1EC02420004C1081 /* UIView+additional.m in Sources */,
+				6C34BF1C1EC95B5900E65C3E /* RechargeControl.m in Sources */,
 				6C50D0231EC5B6A5000D97FC /* verticalLayoutCell.m in Sources */,
 				6CFD16791EBADBA300D9C9E1 /* GameElectronicMenu.m in Sources */,
 				6C8DBE691EB97D60007C55F1 /* UserModel.m in Sources */,
+				6C34BF0E1EC93DC900E65C3E /* MyAccountHeaderCell.m in Sources */,
 				6CD3EC5D1EB85FFC0037564E /* camp.xcdatamodeld in Sources */,
 				6CD3EC8D1EB87D940037564E /* CLLockView.m in Sources */,
 				6CB6A4ED1EB834B400FD9895 /* main.m in Sources */,
@@ -1000,9 +1072,13 @@
 				6CD9B83F1EBC76D7001F5373 /* KLCPopup.m in Sources */,
 				6CD3EC8B1EB87D940037564E /* CLLockLabel.m in Sources */,
 				6CFD166C1EBAC21900D9C9E1 /* CampBaseControl.m in Sources */,
+				6C34BF181EC9564600E65C3E /* LogOutCell.m in Sources */,
+				6C34BF271EC9AC1C00E65C3E /* quotationInfoModel.m in Sources */,
+				6C34BF091EC93BCB00E65C3E /* MyAccountControl.m in Sources */,
 				6C8DBE6F1EB98D2E007C55F1 /* MainTabBarControl.m in Sources */,
 				6CD9B8461EBC8048001F5373 /* PopContentTableCell.m in Sources */,
 				6CD3EC881EB87D940037564E /* CLLockNavVC.m in Sources */,
+				6C34BF1F1EC95FEA00E65C3E /* CampBaseNavigationController.m in Sources */,
 				6C8DBE7B1EB9CEB2007C55F1 /* DataBaseModel.m in Sources */,
 				6CD3EC871EB87D940037564E /* CoreLockConst.m in Sources */,
 				6CD3EC8A1EB87D940037564E /* CLLockItemView.m in Sources */,
@@ -1180,6 +1256,7 @@
 			baseConfigurationReference = FCFA61262C9A4A789AA407EE /* Pods-camp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/camp/Macro/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
@@ -1195,6 +1272,7 @@
 			baseConfigurationReference = BB81A0DE3CE27D4FC81CED53 /* Pods-camp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/camp/Macro/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
