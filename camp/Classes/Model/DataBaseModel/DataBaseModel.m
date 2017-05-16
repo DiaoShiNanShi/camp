@@ -53,6 +53,26 @@
                 [self.items setValue:gameArray_ forKey:key];
             }];
             
+        }else if([key isEqualToString:@"playeds"]){
+            self.playeds = [NSMutableDictionary dictionary];
+            [value enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                NSMutableArray<playTypeModel *> *gameArray_ = [NSMutableArray arrayWithCapacity:[obj count]];
+                for (NSDictionary *item in obj) {
+                    playTypeModel *model_ = [playTypeModel mj_objectWithKeyValues:item];
+                    [gameArray_ addObject:model_];
+                }
+                [self.playeds setValue:gameArray_ forKey:key];
+            }];
+        }else if([key isEqualToString:@"numcs"]){
+            self.numcs = [NSMutableDictionary dictionary];
+            [value enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                NSMutableArray<NumberModel *> *gameArray_ = [NSMutableArray arrayWithCapacity:[obj count]];
+                for (NSDictionary *item in obj) {
+                    NumberModel *model_ = [NumberModel mj_objectWithKeyValues:item];
+                    [gameArray_ addObject:model_];
+                }
+                [self.numcs setValue:gameArray_ forKey:key];
+            }];
         }else{
             [super setValue:value forKey:key];
         }
@@ -69,6 +89,8 @@
     [aCoder encodeObject:_types forKey:@"types"];
     [aCoder encodeObject:_params forKey:@"params"];
     [aCoder encodeObject:_items forKey:@"items"];
+    [aCoder encodeObject:_playeds forKey:@"playeds"];
+    [aCoder encodeObject:_numcs forKey:@"numcs"];
 }
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
@@ -79,6 +101,8 @@
         self.types = [aDecoder decodeObjectForKey:@"types"];
         self.params = [aDecoder decodeObjectForKey:@"params"];
         self.items = [aDecoder decodeObjectForKey:@"items"];
+        self.playeds = [aDecoder decodeObjectForKey:@"playeds"];
+        self.numcs = [aDecoder decodeObjectForKey:@"numcs"];
     }
     return self;
 }

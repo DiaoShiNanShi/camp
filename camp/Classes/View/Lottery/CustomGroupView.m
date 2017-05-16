@@ -13,8 +13,6 @@
     CAGradientLayer *lineLayer;
     CALayer *verticalLine;
     
-    
-    NSMutableArray *JSbtnArray;
 }
 
 @end
@@ -28,18 +26,13 @@
     return self;
 }
 - (void)setUI{
-    /* 循环产生控件 */
-    /* 解档数据 */
-    NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
-    DataBaseModel* dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
-    
-    JSbtnArray = [NSMutableArray arrayWithCapacity:dataBase.types.count];
+
     float width = kScreenWidth / 2;
     float height = kScreenWidth / 4;
     float y = 0.0;
     CGPoint startPoint = CGPointMake(1.0, 0);
     CGPoint endPoint = CGPointMake(0, 0);
-    for(int  i = 0; i < dataBase.types.count; i ++){
+    for(int  i = 0; i < CommonDataBaseModel.types.count; i ++){
         y = i / 2 * height;
         UIView *view_ = [[UIView alloc] initWithFrame:CGRectMake(i % 2 == 0 ?0:width,y, width, height)];
         [view_ setBackgroundColor:RGBACOLOR(49, 49, 49, 1)];
@@ -51,7 +44,8 @@
         [JsBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         JsBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         JsBtn.tag = i;
-        [JsBtn addTarget:view_ action:@selector(JsButton:) forControlEvents:UIControlEventTouchUpInside];
+        UITapGestureRecognizer *JsButton_tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(JsButton_OnClick:)];
+        [JsBtn addGestureRecognizer:JsButton_tap];
         
         UIButton *BzBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [BzBtn setFrame:CGRectMake(width/2, height/2, height, height/2)];
@@ -59,12 +53,13 @@
         [BzBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         BzBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         BzBtn.tag = i;
-        [BzBtn addTarget:view_ action:@selector(BzButton:) forControlEvents:UIControlEventTouchUpInside];
+        UITapGestureRecognizer *BzBtn_tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(BzButton_OnClick:)];
+        [BzBtn addGestureRecognizer:BzBtn_tap];
         
         UILabel *groupName = [[UILabel alloc] init];
         [groupName setFrame:CGRectMake(0, height - 15, height, 10)];
         groupName.font = [UIFont systemFontOfSize:13];
-        groupName.text = dataBase.types[i].groupName;
+        groupName.text = CommonDataBaseModel.types[i].groupName;
         groupName.textAlignment = NSTextAlignmentCenter;
         [groupName setTextColor:[UIColor redColor]];
         
@@ -92,23 +87,22 @@
         [view_ addSubview:groupName];
         [view_ addSubview:icon];
         
-        [JSbtnArray addObject:JsBtn];
         [self addSubview:view_];
     }
     self.returnSelfHeight = ^float{
         return y +  height;
     };
 }
-- (void)JsButton:(UIButton *)sender{
+
+- (void)JsButton_OnClick:(UITapGestureRecognizer *)tap{
     if(!self.PushToJsPage)return;
-    NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
-    DataBaseModel* dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
-    self.PushToJsPage([dataBase.types[sender.tag].client_Cache_Type[@"id"] integerValue]);
+    self.PushToJsPage([CommonDataBaseModel.types[tap.view.tag].client_Cache_Type[@"id"] integerValue]);
 }
-- (void)BzButton:(UIButton *)sender{
+- (void)BzButton_OnClick:(UITapGestureRecognizer *)tap{
     if(!self.PushToBzPage)return;
     NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
     DataBaseModel* dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
-    self.PushToBzPage([dataBase.types[sender.tag].client_Cache_Type[@"id"] integerValue]);
+    self.PushToBzPage([dataBase.types[tap.view.tag].client_Cache_Type[@"id"] integerValue]);
 }
+
 @end

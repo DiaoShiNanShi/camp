@@ -12,9 +12,6 @@
 
 @interface ElectronicGameControl ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
-    /* 数据源 */
-    DataBaseModel *dataBase;
-    
     /* 选择的游戏分组模型 */
     gameGroupModel *groupModel;
     
@@ -30,12 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    /* 解档数据 */
-    NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
-    dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
-    
     /* 默认选择第一个分组模型 */
-    groupModel = dataBase.gameGroups[didSelectIndex];
+    groupModel = CommonDataBaseModel.gameGroups[didSelectIndex];
     
     /* 注册collectionCell */
     [self.collection registerNib:[UINib nibWithNibName:@"GameCell" bundle:nil] forCellWithReuseIdentifier:KGamesCollectionViewCell];
@@ -43,7 +36,7 @@
     __weak typeof(self)  weakSelf = self;
     self.gameMenu.didSelectGameMenu = ^(NSInteger selectIndex) {
         didSelectIndex = selectIndex;
-        groupModel = dataBase.gameGroups[didSelectIndex];
+        groupModel = CommonDataBaseModel.gameGroups[didSelectIndex];
         [weakSelf.collection reloadData];
         [weakSelf.collection setContentOffset:CGPointMake(0, 0) animated:YES];
     };
@@ -51,10 +44,10 @@
 
 #pragma mark - UICollectionViewDelegate,UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return [dataBase.games[groupModel.code] count];
+    return [CommonDataBaseModel.games[groupModel.code] count];
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    gameModel *game_ = dataBase.games[groupModel.code][indexPath.row];
+    gameModel *game_ = CommonDataBaseModel.games[groupModel.code][indexPath.row];
     GameCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:KGamesCollectionViewCell forIndexPath:indexPath];
     cell.gameName.text = game_.name1;
     [cell.gameIcon sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseUrl,game_.picPath1]]];

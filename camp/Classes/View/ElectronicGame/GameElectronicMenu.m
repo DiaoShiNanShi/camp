@@ -32,19 +32,15 @@
 - (void)setUI{
     
     @try {
-        /* 解档数据 */
-        NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
-        DataBaseModel *dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
-        
         /* 初始化数组 */
-        allMenuLabels = [NSMutableArray arrayWithCapacity:dataBase.gameGroups.count];
+        allMenuLabels = [NSMutableArray arrayWithCapacity:CommonDataBaseModel.gameGroups.count];
         /* 循环产生控件 */
         float magin = 10.0;
         float x = 10.0;
-        for (int i = 0; i < dataBase.gameGroups.count; i ++) {
+        for (int i = 0; i < CommonDataBaseModel.gameGroups.count; i ++) {
           
             UILabel *lbl = [[UILabel alloc] init];
-            lbl.text = dataBase.gameGroups[i].describe;
+            lbl.text = CommonDataBaseModel.gameGroups[i].describe;
             lbl.font = [UIFont systemFontOfSize:13];
             lbl.textAlignment = NSTextAlignmentCenter;
             lbl.textColor = [UIColor whiteColor];

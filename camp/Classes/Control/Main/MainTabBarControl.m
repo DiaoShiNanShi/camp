@@ -21,11 +21,8 @@
     // Do any additional setup after loading the view.
     [self.tabBar setBarTintColor:RGBACOLOR(15, 15, 15, 1)];
     self.tabBar.tintColor  = RGBACOLOR(233, 197, 123, 1);
-    /* 解档数据 */
-    NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
-    DataBaseModel * dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
     /* 电子游戏界面 */
-    if([dataBase.params[@"gameFrame"].paramValue isEqualToString:@"2"]){
+    if([CommonDataBaseModel.params[@"gameFrame"].paramValue isEqualToString:@"2"]){
         // verticalLayoutControlID
         NSMutableArray *arr = [NSMutableArray arrayWithArray:self.childViewControllers];
         verticalLayoutControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:@"verticalLayoutControlID"];

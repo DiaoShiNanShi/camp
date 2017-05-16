@@ -9,6 +9,8 @@
 #import "LotteryControl.h"
 #import "CustomGroupView.h"
 #import "sportsGameCell.h"
+#import "Js_DiskInfoControl.h"
+
 @interface LotteryControl ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, weak) IBOutlet SDCycleScrollView *sdCycView;
@@ -31,15 +33,6 @@
     /* 注册Cell */
     [self.table registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     [self.table registerNib:[UINib nibWithNibName:@"sportsGameCell" bundle:nil] forCellReuseIdentifier:NSStringFromClass([sportsGameCell class])];
-    
-    /* customView 点击回调 */
-    _customView.PushToJsPage = ^(NSInteger pageId) {
-        NSLog(@"");
-    };
-    _customView.PushToBzPage = ^(NSInteger pageId) {
-        NSLog(@"");
-    };
-    
 }
 - (void)updateLanguage{
     self.title = CustomStr(@"tabbar_lottery")
@@ -58,6 +51,22 @@
         _customView.frame = CGRectMake(0, 0, kScreenWidth, self.customView.returnSelfHeight());
         [cell.contentView setBackgroundColor:RGBACOLOR(15, 15, 15, 1)];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        
+        /* customView 点击回调 */
+        __weak typeof(self) weakSelf = self;
+        _customView.PushToJsPage = ^(NSInteger pageId) {
+            /* 保存盘面ID */
+            [persistenceData setValue:@(pageId) forKey:PD_DiskID];
+            Js_DiskInfoControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:@"Js_DiskInfoControlID"];
+            [Vc setHidesBottomBarWhenPushed:YES];
+            [weakSelf.navigationController pushViewController:Vc animated:YES];
+        };
+        _customView.PushToBzPage = ^(NSInteger pageId) {
+            [persistenceData setValue:@(pageId) forKey:PD_DiskID];
+            NSLog(@"");
+        };
+        
         return cell;
     }else{
         sportsGameCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([sportsGameCell class])];

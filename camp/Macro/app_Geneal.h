@@ -11,6 +11,7 @@
 
 #define KAppDelegate                       ((AppDelegate *)[UIApplication sharedApplication].delegate)
 #define KMainStoryboard                 [UIStoryboard storyboardWithName:@"Main" bundle:nil]
+#define KDiskInfoStoryboard           [UIStoryboard storyboardWithName:@"DiskInfo" bundle:nil]
 #define kScreenWidth                        CGRectGetWidth([UIScreen mainScreen].bounds)
 #define kScreenHeight                       CGRectGetHeight([UIScreen mainScreen].bounds)
 
@@ -45,8 +46,14 @@
 #define PD_DataBaseModel                @"pd_DataBaseModel"
 #define PD_Version                              @"pd_Version"
 
+/* 当前盘面ID */
+#define PD_DiskID                               @"pd_diskID"
+
 /* 获取本地保存的信息 */
 #define LocalDataBaseModelFilePath          [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"dataBaseModel.achive"]
+
+/* 通用页面加载数据 */
+#define CommonDataBaseModel                 ((DataBaseModel *)[NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfFile:LocalDataBaseModelFilePath]])
 
 /*                   IdentFiler_Control*/
 #define KMainTabBarIdentFiler                                           @"MainTabBarControlIdentFiler"

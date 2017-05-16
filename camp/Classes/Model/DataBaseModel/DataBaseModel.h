@@ -12,6 +12,8 @@
 @class typesModel;
 @class paramsModel;
 @class quotationInfoModel;
+@class playTypeModel;
+@class NumberModel;
 @interface DataBaseModel : NSObject<NSCoding>
 
 /* 游戏分组 */
@@ -27,6 +29,12 @@
 
 /* 盘面信息 */
 @property (nonatomic, strong) NSMutableDictionary <NSString *, NSArray<quotationInfoModel *> *>  *items;
+
+/* 玩法信息 */
+@property (nonatomic, strong) NSMutableDictionary <NSString *, NSArray<playTypeModel *>*> *playeds;
+
+/* 号码信息 */
+@property (nonatomic, strong) NSMutableDictionary <NSString *,NSArray<NumberModel *>*> *numcs;
 
 /* 最新版本号 */
 @property (nonatomic, copy) NSString *version;

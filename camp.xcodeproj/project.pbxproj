@@ -91,6 +91,18 @@
 		6CFD166C1EBAC21900D9C9E1 /* CampBaseControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD166B1EBAC21900D9C9E1 /* CampBaseControl.m */; };
 		6CFD166F1EBAC27500D9C9E1 /* ElectronicGameControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD166E1EBAC27500D9C9E1 /* ElectronicGameControl.m */; };
 		6CFD16791EBADBA300D9C9E1 /* GameElectronicMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD16781EBADBA300D9C9E1 /* GameElectronicMenu.m */; };
+		6CFDBBC81ECA8E0200014B5E /* DiskPageNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDBBC71ECA8E0200014B5E /* DiskPageNavigationController.m */; };
+		6CFDBBCB1ECA91E100014B5E /* Js_DiskInfoControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDBBCA1ECA91E100014B5E /* Js_DiskInfoControl.m */; };
+		6CFDBBCF1ECA972D00014B5E /* CustomDiskInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDBBCE1ECA972D00014B5E /* CustomDiskInfoView.m */; };
+		6CFDBBD31ECAA82C00014B5E /* DiskViewCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDBBD11ECAA82C00014B5E /* DiskViewCollectionView.m */; };
+		6CFDBBD41ECAA82C00014B5E /* DiskViewCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CFDBBD21ECAA82C00014B5E /* DiskViewCollectionView.xib */; };
+		6CFDBBD71ECAE07900014B5E /* shortcutCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDBBD61ECAE07900014B5E /* shortcutCollectionView.m */; };
+		6CFDBBDA1ECAF4A600014B5E /* playTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDBBD91ECAF4A600014B5E /* playTypeModel.m */; };
+		6CFDBBDD1ECAF57500014B5E /* NumberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDBBDC1ECAF57500014B5E /* NumberModel.m */; };
+		6CFDBBE11ECAF7AD00014B5E /* playingTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDBBDF1ECAF7AD00014B5E /* playingTypeCell.m */; };
+		6CFDBBE21ECAF7AD00014B5E /* playingTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CFDBBE01ECAF7AD00014B5E /* playingTypeCell.xib */; };
+		6CFDBBE61ECAFAC200014B5E /* NumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDBBE41ECAFAC200014B5E /* NumberCell.m */; };
+		6CFDBBE71ECAFAC200014B5E /* NumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CFDBBE51ECAFAC200014B5E /* NumberCell.xib */; };
 		D67C1E7F4C1F20852754170E /* Pods_camp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91480066AAC9FC87F06E853 /* Pods_camp.framework */; };
 /* End PBXBuildFile section */
 
@@ -256,6 +268,27 @@
 		6CFD166E1EBAC27500D9C9E1 /* ElectronicGameControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronicGameControl.m; sourceTree = "<group>"; };
 		6CFD16771EBADBA300D9C9E1 /* GameElectronicMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameElectronicMenu.h; sourceTree = "<group>"; };
 		6CFD16781EBADBA300D9C9E1 /* GameElectronicMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameElectronicMenu.m; sourceTree = "<group>"; };
+		6CFDBBC61ECA8E0200014B5E /* DiskPageNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskPageNavigationController.h; sourceTree = "<group>"; };
+		6CFDBBC71ECA8E0200014B5E /* DiskPageNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskPageNavigationController.m; sourceTree = "<group>"; };
+		6CFDBBC91ECA91E100014B5E /* Js_DiskInfoControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Js_DiskInfoControl.h; sourceTree = "<group>"; };
+		6CFDBBCA1ECA91E100014B5E /* Js_DiskInfoControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Js_DiskInfoControl.m; sourceTree = "<group>"; };
+		6CFDBBCD1ECA972D00014B5E /* CustomDiskInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDiskInfoView.h; sourceTree = "<group>"; };
+		6CFDBBCE1ECA972D00014B5E /* CustomDiskInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDiskInfoView.m; sourceTree = "<group>"; };
+		6CFDBBD01ECAA82C00014B5E /* DiskViewCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskViewCollectionView.h; sourceTree = "<group>"; };
+		6CFDBBD11ECAA82C00014B5E /* DiskViewCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskViewCollectionView.m; sourceTree = "<group>"; };
+		6CFDBBD21ECAA82C00014B5E /* DiskViewCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiskViewCollectionView.xib; sourceTree = "<group>"; };
+		6CFDBBD51ECAE07900014B5E /* shortcutCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shortcutCollectionView.h; sourceTree = "<group>"; };
+		6CFDBBD61ECAE07900014B5E /* shortcutCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shortcutCollectionView.m; sourceTree = "<group>"; };
+		6CFDBBD81ECAF4A600014B5E /* playTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playTypeModel.h; sourceTree = "<group>"; };
+		6CFDBBD91ECAF4A600014B5E /* playTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = playTypeModel.m; sourceTree = "<group>"; };
+		6CFDBBDB1ECAF57500014B5E /* NumberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberModel.h; sourceTree = "<group>"; };
+		6CFDBBDC1ECAF57500014B5E /* NumberModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberModel.m; sourceTree = "<group>"; };
+		6CFDBBDE1ECAF7AD00014B5E /* playingTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playingTypeCell.h; sourceTree = "<group>"; };
+		6CFDBBDF1ECAF7AD00014B5E /* playingTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = playingTypeCell.m; sourceTree = "<group>"; };
+		6CFDBBE01ECAF7AD00014B5E /* playingTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playingTypeCell.xib; sourceTree = "<group>"; };
+		6CFDBBE31ECAFAC200014B5E /* NumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberCell.h; sourceTree = "<group>"; };
+		6CFDBBE41ECAFAC200014B5E /* NumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberCell.m; sourceTree = "<group>"; };
+		6CFDBBE51ECAFAC200014B5E /* NumberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberCell.xib; sourceTree = "<group>"; };
 		BB81A0DE3CE27D4FC81CED53 /* Pods-camp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp/Pods-camp.release.xcconfig"; sourceTree = "<group>"; };
 		E91480066AAC9FC87F06E853 /* Pods_camp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_camp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFA61262C9A4A789AA407EE /* Pods-camp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp/Pods-camp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -311,6 +344,7 @@
 		6C07C6581EC00A470086869E /* Lottery */ = {
 			isa = PBXGroup;
 			children = (
+				6CFDBBC01ECA8CEA00014B5E /* 详细玩法信息 */,
 				6C07C6591EC00A7D0086869E /* LotteryControl.h */,
 				6C07C65A1EC00A7D0086869E /* LotteryControl.m */,
 			);
@@ -330,6 +364,7 @@
 		6C07C6631EC010790086869E /* Lottery */ = {
 			isa = PBXGroup;
 			children = (
+				6CFDBBCC1ECA96F500014B5E /* 详细玩法信息 */,
 				6C07C6641EC010EE0086869E /* CustomGroupView.h */,
 				6C07C6651EC010EE0086869E /* CustomGroupView.m */,
 				6C50CFEF1EC55102000D97FC /* sportsGameCell.h */,
@@ -468,6 +503,10 @@
 				6C50D0161EC5B03E000D97FC /* paramsModel.m */,
 				6C34BF251EC9AC1C00E65C3E /* quotationInfoModel.h */,
 				6C34BF261EC9AC1C00E65C3E /* quotationInfoModel.m */,
+				6CFDBBD81ECAF4A600014B5E /* playTypeModel.h */,
+				6CFDBBD91ECAF4A600014B5E /* playTypeModel.m */,
+				6CFDBBDB1ECAF57500014B5E /* NumberModel.h */,
+				6CFDBBDC1ECAF57500014B5E /* NumberModel.m */,
 			);
 			path = DataBaseModel;
 			sourceTree = "<group>";
@@ -785,6 +824,8 @@
 				6CFD166B1EBAC21900D9C9E1 /* CampBaseControl.m */,
 				6C34BF1D1EC95FEA00E65C3E /* CampBaseNavigationController.h */,
 				6C34BF1E1EC95FEA00E65C3E /* CampBaseNavigationController.m */,
+				6CFDBBC61ECA8E0200014B5E /* DiskPageNavigationController.h */,
+				6CFDBBC71ECA8E0200014B5E /* DiskPageNavigationController.m */,
 			);
 			path = BaseControl;
 			sourceTree = "<group>";
@@ -812,6 +853,35 @@
 				6CEB31A71EBC281100A95344 /* GameCell.xib */,
 			);
 			path = ElectronicGame;
+			sourceTree = "<group>";
+		};
+		6CFDBBC01ECA8CEA00014B5E /* 详细玩法信息 */ = {
+			isa = PBXGroup;
+			children = (
+				6CFDBBC91ECA91E100014B5E /* Js_DiskInfoControl.h */,
+				6CFDBBCA1ECA91E100014B5E /* Js_DiskInfoControl.m */,
+			);
+			path = "详细玩法信息";
+			sourceTree = "<group>";
+		};
+		6CFDBBCC1ECA96F500014B5E /* 详细玩法信息 */ = {
+			isa = PBXGroup;
+			children = (
+				6CFDBBCD1ECA972D00014B5E /* CustomDiskInfoView.h */,
+				6CFDBBCE1ECA972D00014B5E /* CustomDiskInfoView.m */,
+				6CFDBBD01ECAA82C00014B5E /* DiskViewCollectionView.h */,
+				6CFDBBD11ECAA82C00014B5E /* DiskViewCollectionView.m */,
+				6CFDBBD21ECAA82C00014B5E /* DiskViewCollectionView.xib */,
+				6CFDBBD51ECAE07900014B5E /* shortcutCollectionView.h */,
+				6CFDBBD61ECAE07900014B5E /* shortcutCollectionView.m */,
+				6CFDBBDE1ECAF7AD00014B5E /* playingTypeCell.h */,
+				6CFDBBDF1ECAF7AD00014B5E /* playingTypeCell.m */,
+				6CFDBBE01ECAF7AD00014B5E /* playingTypeCell.xib */,
+				6CFDBBE31ECAFAC200014B5E /* NumberCell.h */,
+				6CFDBBE41ECAFAC200014B5E /* NumberCell.m */,
+				6CFDBBE51ECAFAC200014B5E /* NumberCell.xib */,
+			);
+			path = "详细玩法信息";
 			sourceTree = "<group>";
 		};
 		CA60E65A604DFE1059E482DE /* Frameworks */ = {
@@ -935,15 +1005,18 @@
 				6C50CFFF1EC55DE1000D97FC /* Main.storyboard in Resources */,
 				6C50CFF91EC551C5000D97FC /* ic_physical_footer1.png in Resources */,
 				6CD9B83A1EBC68D9001F5373 /* ic_video_pic5.jpg in Resources */,
+				6CFDBBD41ECAA82C00014B5E /* DiskViewCollectionView.xib in Resources */,
 				6CD9B8381EBC68D9001F5373 /* ic_video_pic3.jpg in Resources */,
 				6CD9B8391EBC68D9001F5373 /* ic_video_pic4.jpg in Resources */,
 				6C07C6601EC00BD40086869E /* ic_banner1.png in Resources */,
 				6C50D0041EC55E34000D97FC /* Main.storyboard in Resources */,
 				6C0031961EC05F63004C1081 /* CustomLocalizable.strings in Resources */,
+				6CFDBBE71ECAFAC200014B5E /* NumberCell.xib in Resources */,
 				6CD9B83B1EBC68D9001F5373 /* ic_video_pic6.jpg in Resources */,
 				6C00318C1EC05859004C1081 /* LaunchScreen.storyboard in Resources */,
 				6C50CFF31EC55102000D97FC /* sportsGameCell.xib in Resources */,
 				6C07C6611EC00BD40086869E /* ic_banner2.png in Resources */,
+				6CFDBBE21ECAF7AD00014B5E /* playingTypeCell.xib in Resources */,
 				6C50CFF81EC551C5000D97FC /* ic_physical_footer_btn.png in Resources */,
 				6CEB31A91EBC281100A95344 /* GameCell.xib in Resources */,
 				6C50D02B1EC5B785000D97FC /* LiveVideoCollectionCell.xib in Resources */,
@@ -1037,6 +1110,7 @@
 			files = (
 				6CD3EC891EB87D940037564E /* CLLockInfoView.m in Sources */,
 				6CD3EC861EB87D940037564E /* CALayer+Anim.m in Sources */,
+				6CFDBBDD1ECAF57500014B5E /* NumberModel.m in Sources */,
 				6CD3EC691EB869510037564E /* CALayer+SetBorder.m in Sources */,
 				6C50D01A1EC5B65F000D97FC /* verticalLayoutControl.m in Sources */,
 				6CD3EC961EB87DA60037564E /* NSString+File.m in Sources */,
@@ -1045,14 +1119,18 @@
 				6C07C6661EC010EE0086869E /* CustomGroupView.m in Sources */,
 				6C50D0211EC5B6A5000D97FC /* GroupSettingCell.m in Sources */,
 				6C50D02A1EC5B785000D97FC /* LiveVideoCollectionCell.m in Sources */,
+				6CFDBBE61ECAFAC200014B5E /* NumberCell.m in Sources */,
 				6C34BF241EC9894400E65C3E /* shortcutRechargeCell.m in Sources */,
 				6CFD166F1EBAC27500D9C9E1 /* ElectronicGameControl.m in Sources */,
 				6C00317F1EC05438004C1081 /* FGLanguageTool.m in Sources */,
 				6C8DBE7E1EB9D22B007C55F1 /* gameGroupModel.m in Sources */,
+				6CFDBBD31ECAA82C00014B5E /* DiskViewCollectionView.m in Sources */,
 				6CD3EC451EB841EC0037564E /* AppDelegate.m in Sources */,
 				6CD3EC9A1EB87ED60037564E /* CLLockVC.m in Sources */,
 				6CD3EC5A1EB85DBB0037564E /* LoginController.m in Sources */,
 				6C50D02E1EC5B9A9000D97FC /* LiveFramLayoutControl.m in Sources */,
+				6CFDBBE11ECAF7AD00014B5E /* playingTypeCell.m in Sources */,
+				6CFDBBCF1ECA972D00014B5E /* CustomDiskInfoView.m in Sources */,
 				6C00316F1EC02420004C1081 /* UIView+additional.m in Sources */,
 				6C34BF1C1EC95B5900E65C3E /* RechargeControl.m in Sources */,
 				6C50D0231EC5B6A5000D97FC /* verticalLayoutCell.m in Sources */,
@@ -1061,6 +1139,7 @@
 				6C34BF0E1EC93DC900E65C3E /* MyAccountHeaderCell.m in Sources */,
 				6CD3EC5D1EB85FFC0037564E /* camp.xcdatamodeld in Sources */,
 				6CD3EC8D1EB87D940037564E /* CLLockView.m in Sources */,
+				6CFDBBD71ECAE07900014B5E /* shortcutCollectionView.m in Sources */,
 				6CB6A4ED1EB834B400FD9895 /* main.m in Sources */,
 				6CD9B8421EBC7887001F5373 /* PopContentView.m in Sources */,
 				6CEB31A81EBC281100A95344 /* GameCell.m in Sources */,
@@ -1074,13 +1153,16 @@
 				6CFD166C1EBAC21900D9C9E1 /* CampBaseControl.m in Sources */,
 				6C34BF181EC9564600E65C3E /* LogOutCell.m in Sources */,
 				6C34BF271EC9AC1C00E65C3E /* quotationInfoModel.m in Sources */,
+				6CFDBBCB1ECA91E100014B5E /* Js_DiskInfoControl.m in Sources */,
 				6C34BF091EC93BCB00E65C3E /* MyAccountControl.m in Sources */,
+				6CFDBBC81ECA8E0200014B5E /* DiskPageNavigationController.m in Sources */,
 				6C8DBE6F1EB98D2E007C55F1 /* MainTabBarControl.m in Sources */,
 				6CD9B8461EBC8048001F5373 /* PopContentTableCell.m in Sources */,
 				6CD3EC881EB87D940037564E /* CLLockNavVC.m in Sources */,
 				6C34BF1F1EC95FEA00E65C3E /* CampBaseNavigationController.m in Sources */,
 				6C8DBE7B1EB9CEB2007C55F1 /* DataBaseModel.m in Sources */,
 				6CD3EC871EB87D940037564E /* CoreLockConst.m in Sources */,
+				6CFDBBDA1ECAF4A600014B5E /* playTypeModel.m in Sources */,
 				6CD3EC8A1EB87D940037564E /* CLLockItemView.m in Sources */,
 				6C07C6571EC0042F0086869E /* typesModel.m in Sources */,
 				6CD3EC8C1EB87D940037564E /* CLLockMainView.m in Sources */,
@@ -1256,7 +1338,6 @@
 			baseConfigurationReference = FCFA61262C9A4A789AA407EE /* Pods-camp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/camp/Macro/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
@@ -1272,7 +1353,6 @@
 			baseConfigurationReference = BB81A0DE3CE27D4FC81CED53 /* Pods-camp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/camp/Macro/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";

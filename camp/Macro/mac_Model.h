@@ -16,5 +16,7 @@
 #import "typesModel.h"
 #import "paramsModel.h"
 #import "quotationInfoModel.h"
+#import "playTypeModel.h"
+#import "NumberModel.h"
 
 #endif /* mac_Model_h */

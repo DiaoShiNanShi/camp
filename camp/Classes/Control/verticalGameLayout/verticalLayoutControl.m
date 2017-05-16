@@ -28,12 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    /* 解档数据 */
-    NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
-    dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
 
     /** 默认第一个 */
-    groupModel = dataBase.gameGroups.firstObject;
+    groupModel = CommonDataBaseModel.gameGroups.firstObject;
     
     /** 注册Nib */
     [self.table registerNib:[UINib nibWithNibName:@"GroupSettingCell" bundle:nil] forCellReuseIdentifier:NSStringFromClass([GroupSettingCell class])];
