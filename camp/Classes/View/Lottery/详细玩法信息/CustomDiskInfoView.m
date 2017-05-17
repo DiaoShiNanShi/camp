@@ -20,7 +20,6 @@
 
 @property (nonatomic, strong) UICollectionView *collection;
 @end
-
 @implementation CustomDiskInfoView
 
 - (instancetype)initWithFrame:(CGRect)frame withClickCall_Black:(diskClick)disk withDismiss:(dismiss)dis
@@ -28,7 +27,7 @@
     self = [super initWithFrame:frame];
     if(self){
         disk_ = disk;
-        disk_ = dis;
+        dis_ = dis;
         DataSourceArray = [NSArray arrayWithArray:CommonDataBaseModel.items[[[persistenceData valueForKey:PD_DiskID] stringValue]]];
         backGroudView = [[UIView alloc] initWithFrame:self.bounds];
         [backGroudView setBackgroundColor:[UIColor clearColor]];
@@ -45,20 +44,22 @@
         float collectionHeight = DataSourceArray.count / 2 * 40 + (DataSourceArray.count % 2) * 40;
         CGRect rect = CGRectMake(0, 0, kScreenWidth, collectionHeight);
         self.collection = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
+        [self.collection setBackgroundColor:RGBACOLOR(44, 44, 44, 1)];
         self.collection.dataSource=self;
         self.collection.delegate=self;
-        [self.collection setBackgroundColor:[UIColor clearColor]];
         
         //注册Cell，必须要有
         [self.collection registerNib:[UINib nibWithNibName:@"DiskViewCollectionView" bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([DiskViewCollectionView class])];
-        [backGroudView addSubview:self.collection];
+        [self addSubview:self.collection];
         
         UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, collectionHeight, kScreenWidth, 30)];
-        [footerView setBackgroundColor:[UIColor orangeColor]];
+        [footerView setBackgroundColor:RGBACOLOR(44, 44, 44, 1)];
         
         UILabel *hintLbl = [[UILabel alloc] init];
         [hintLbl setText:@"请选择玩法信息"];
         hintLbl.font = [UIFont systemFontOfSize:14];
+        [hintLbl setTextColor:RGBACOLOR(167, 79, 33, 1)];
+        [hintLbl setBackgroundColor:[UIColor clearColor]];
         [footerView addSubview:hintLbl];
         [self addSubview:footerView];
         
@@ -70,7 +71,7 @@
 }
 #pragma mark - 点击空白区域消失
 - (void)clickNullArea_Dismiss:(UITapGestureRecognizer *)tap{
-    disk_();
+    dis_();
 }
 
 #pragma mark - UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
@@ -91,6 +92,12 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGSizeMake(kScreenWidth/2, 40);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [persistenceData setValue:@(DataSourceArray[indexPath.row].id) forKey:PD_Items_id];
+    [persistenceData synchronize];
+    disk_();
 }
 
 @end

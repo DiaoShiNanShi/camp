@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface playingTypeCell : UITableViewCell
 
-@property (nonatomic, copy) float (^returnSelfHeight)();
+@property (nonatomic, weak) IBOutlet UICollectionView *collection;
 @property (nonatomic, strong) playTypeModel *entity;
 @end

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface NumberCell : UICollectionViewCell
-
+@property (nonatomic, weak) IBOutlet UILabel *numberName;
+@property (nonatomic, strong) NumberModel *entity;
+/* 玩法ID */
+@property (nonatomic, assign) NSInteger plID;
 @end

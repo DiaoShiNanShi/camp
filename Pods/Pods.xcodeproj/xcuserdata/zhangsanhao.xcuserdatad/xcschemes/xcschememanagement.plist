@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LBXScan.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,7 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B96A7A056A8EEBDB31440615E1972E8</key>
+		<key>0210DE5F6421EE8C4F0B89498C94D4EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>40C8A8B3817B3EA37C0DA4734793B253</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,17 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>67850113B60C403AAFE1417976F53932</key>
+		<key>B8A037FFEDE0C7442A9783FABEAA2133</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B8DEC145D09AE0BAF13BA58B662FC1D6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C34CF55CB05B7875B2122795C5E05B9B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +88,11 @@
 			<true/>
 		</dict>
 		<key>D52144DE9D7255DE912490FF5A806573</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB980F09681DEF621A114E21B4BD0165</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -11,7 +11,7 @@
 #import "shortcutCollectionView.h"
 #import "playingTypeCell.h"
 
-@interface Js_DiskInfoControl ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
+@interface Js_DiskInfoControl ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 {
     /* 快捷数组 */
     NSArray *shortcutArr;
@@ -20,8 +20,7 @@
     UIView *AwardContent;
     UIView *OpenAward;
     UIButton *OpenAwardBtn;
-    
-    
+
 }
 
 /* 盘面信息 自定义视图 */
@@ -41,14 +40,39 @@
 - (void)createUIControls;
 @end
 
+/* 全局 */
+NSMutableDictionary *selectedDic;
+/* 当前价格 */
+float price;
 @implementation Js_DiskInfoControl
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     shortcutArr = @[@"10",@"20",@"50",@"100",@"200",@"500",@"1000",@"2000",@"5000"];
+    [persistenceData setValue:[NSString stringWithFormat:@"%ld",CommonDataBaseModel.items[[[persistenceData valueForKey:PD_DiskID] stringValue]].firstObject.id]  forKey:PD_Items_id];
+    [persistenceData synchronize];
     
+    
+    /* 选中信息 */
+    selectedDic = [NSMutableDictionary dictionary];
+    price = [self.cion_TextFiled.text floatValue];
+    /* 默认添加所有盘面 */
+    for (quotationInfoModel *model in CommonDataBaseModel.items[[[persistenceData valueForKey:PD_DiskID] stringValue]]) {
+        [selectedDic setValue:[NSMutableDictionary dictionary] forKey:[NSString stringWithFormat:@"%ld",model.id]];
+        /* 遍历所有玩法信息 */
+        for (playTypeModel *plModel in CommonDataBaseModel.playeds[[NSString stringWithFormat:@"%ld",model.id]]) {
+            [selectedDic[[NSString stringWithFormat:@"%ld",model.id]] setValue:[NSMutableArray array] forKey:[NSString stringWithFormat:@"%ld",plModel.id]];
+            
+        }
+    }
     [self createUIControls];
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    _table.dataSource = self;
+    [_table reloadData];
 }
 
 - (void)createUIControls{
@@ -159,6 +183,18 @@
 
 // 投注
 - (IBAction)cathectic:(id)sender {
+    NSLog(@"%@",selectedDic);
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    NSLog(@"");
+    if([string isEqualToString:@"\n"]){
+        NSLog(@"a");
+    }
+    
+    return YES;
 }
 
 #pragma mark - UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
@@ -170,13 +206,6 @@
     shortcutCollectionView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"shortcutCollectionViewID" forIndexPath:indexPath];
     cell.cionLbl.text = shortcutArr[indexPath.row];
     return cell;
-//    if(collectionView == self.shortcutCollection){
-//        // 快捷
-//        shortcutCollectionView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"shortcutCollectionViewID" forIndexPath:indexPath];
-//        return cell;
-//    }else{
-//        
-//    }
 }
 //定义每个Item 的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -186,16 +215,18 @@
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return CommonDataBaseModel.playeds[[[persistenceData valueForKey:PD_DiskID] stringValue]].count;
+    return CommonDataBaseModel.playeds[[NSString stringWithFormat:@"%@",[persistenceData valueForKey:PD_Items_id]]].count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     playingTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([playingTypeCell class])];
-    cell.entity = CommonDataBaseModel.playeds[[[persistenceData valueForKey:PD_DiskID] stringValue]][indexPath.row];
+    cell.entity = CommonDataBaseModel.playeds[[NSString stringWithFormat:@"%@",[persistenceData valueForKey:PD_Items_id]]][indexPath.row];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    playingTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([playingTypeCell class])];
-    return cell.returnSelfHeight();
+    playTypeModel *model = CommonDataBaseModel.playeds[[NSString stringWithFormat:@"%@",[persistenceData valueForKey:PD_Items_id]]][indexPath.row];
+    NSArray *dataSourceArr = CommonDataBaseModel.numcs[[NSString stringWithFormat:@"%ld",model.id]];
+    float height = (((dataSourceArr.count - 1) / KColumn) + 1) * KNumberCellHeight + 10;
+    return height;
 }
 
 #pragma mark - Lazy Loding
@@ -203,12 +234,18 @@
     if(!_customDisk){
         CGRect rect = CGRectMake(0, CGRectStatus.size.height +CGRectNav.size.height, kScreenWidth, kScreenHeight - CGRectStatus.size.height - CGRectNav.size.height);
         __weak typeof(self) weakSelf = self;
-        _customDisk = [[CustomDiskInfoView alloc] initWithFrame:rect withClickCall_Black:^{
+        _customDisk = [[CustomDiskInfoView alloc] initWithFrame:rect withClickCall_Black:^() {
+            [weakSelf dismiss];
             
-            NSLog(@"回调成功");
+//            /* 添加一个新的盘面 */
+//            if(![[selectedDic allKeys] containsObject:[NSString stringWithFormat:@"%@",[persistenceData valueForKey:PD_Items_id]]]){
+//                [selectedDic setValue:[NSMutableArray array] forKey:[persistenceData valueForKey:PD_Items_id]];
+//            }
+            [weakSelf.table reloadData];
         } withDismiss:^{
             [weakSelf dismiss];
         }];
+        [_customDisk setBackgroundColor:RGBACOLOR(15, 15, 15, 0.4)];
         _customDisk.alpha = 0.0;
         [_customDisk setHidden:YES];
     }
@@ -218,7 +255,8 @@
     if(!_table){
         _table = [[UITableView alloc] init];
         _table.delegate = self;
-        _table.dataSource = self;
+        _table.backgroundColor = [UIColor clearColor];
+        _table.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_table registerNib:[UINib nibWithNibName:@"playingTypeCell" bundle:nil] forCellReuseIdentifier:NSStringFromClass([playingTypeCell class])];
     }
     return _table;

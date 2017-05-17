@@ -58,6 +58,8 @@
         _customView.PushToJsPage = ^(NSInteger pageId) {
             /* 保存盘面ID */
             [persistenceData setValue:@(pageId) forKey:PD_DiskID];
+            [persistenceData synchronize];
+            
             Js_DiskInfoControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:@"Js_DiskInfoControlID"];
             [Vc setHidesBottomBarWhenPushed:YES];
             [weakSelf.navigationController pushViewController:Vc animated:YES];
