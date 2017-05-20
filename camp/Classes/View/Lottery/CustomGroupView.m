@@ -96,13 +96,11 @@
 
 - (void)JsButton_OnClick:(UITapGestureRecognizer *)tap{
     if(!self.PushToJsPage)return;
-    self.PushToJsPage([CommonDataBaseModel.types[tap.view.tag].client_Cache_Type[@"id"] integerValue]);
+    self.PushToJsPage(CommonDataBaseModel.types[tap.view.tag]);
 }
 - (void)BzButton_OnClick:(UITapGestureRecognizer *)tap{
     if(!self.PushToBzPage)return;
-    NSData *UnarchiveDataBase = [NSData dataWithContentsOfFile:LocalDataBaseModelFilePath];
-    DataBaseModel* dataBase = [NSKeyedUnarchiver unarchiveObjectWithData:UnarchiveDataBase];
-    self.PushToBzPage([dataBase.types[tap.view.tag].client_Cache_Type[@"id"] integerValue]);
+    self.PushToBzPage(CommonDataBaseModel.types[tap.view.tag]);
 }
 
 @end

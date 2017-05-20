@@ -11,7 +11,8 @@
 /** 引用全局*/
 extern NSMutableDictionary *selectedDic;
 extern float price;
-
+extern NSInteger pourNumber;
+extern float extendedPrice;
 @implementation NumberCell
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -42,7 +43,7 @@ extern float price;
     self.numberName.layer.borderColor = tap.view.tag == 0 ? [UIColor redColor].CGColor : [UIColor whiteColor].CGColor;
     [self.numberName setTextColor:tap.view.tag == 0 ? [UIColor redColor] : [UIColor whiteColor]];
     tap.view.tag = tap.view.tag == 0 ? 1 : 0 ;
-
+    
     if(tap.view.tag == 0){
         /* 移除 */
         NSMutableArray *tmpArr = selectedDic[[NSString stringWithFormat:@"%@",[persistenceData valueForKey:PD_Items_id]]][[NSString stringWithFormat:@"%ld",self.plID]];
@@ -53,11 +54,17 @@ extern float price;
                 break;
             }
         }
+        pourNumber --;
+        extendedPrice -= [tmpDic[@"price"] floatValue];
         [tmpArr removeObject:tmpDic];
     }else{
         /* 添加 */
-        [selectedDic[[NSString stringWithFormat:@"%@",[persistenceData valueForKey:PD_Items_id]]][[NSString stringWithFormat:@"%ld",self.plID]] addObject:@{@"numcs_id":@(self.entity.index),@"price":@(price)}];
+        [selectedDic[[NSString stringWithFormat:@"%@",[persistenceData valueForKey:PD_Items_id]]][[NSString stringWithFormat:@"%ld",self.plID]] addObject:@{@"numcs_id":@(self.entity.index),@"price":@(price),@"name":self.entity.name}];
+        pourNumber ++;
+        extendedPrice += price;
     }
+    /* 计算好的价格 ，发送通知*/
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"updatePriceInfo" object:nil userInfo:nil];
 }
 
 @end

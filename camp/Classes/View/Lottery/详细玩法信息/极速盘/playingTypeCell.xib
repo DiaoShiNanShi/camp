@@ -51,6 +51,9 @@
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="clearBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nj4-e0-moe"/>
+                        </connections>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HxR-Gb-e7T">
                         <rect key="frame" x="83" y="5" width="267" height="64.5"/>

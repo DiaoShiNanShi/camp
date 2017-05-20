@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^diskClick)();
+typedef void(^diskClick)(NSString *DiskName);
 typedef void(^dismiss)();
 @interface CustomDiskInfoView : UIView
 

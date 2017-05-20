@@ -12,4 +12,5 @@
 
 /** 更新语言 */
 - (void)updateLanguage;
+- (void)comblack:(UIButton *)sender;
 @end

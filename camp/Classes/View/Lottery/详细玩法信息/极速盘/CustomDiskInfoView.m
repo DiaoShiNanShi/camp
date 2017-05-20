@@ -97,7 +97,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [persistenceData setValue:@(DataSourceArray[indexPath.row].id) forKey:PD_Items_id];
     [persistenceData synchronize];
-    disk_();
+    disk_(DataSourceArray[indexPath.row].name);
 }
 
 @end

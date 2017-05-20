@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
     // 设置键盘
     IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
     manager.enable = YES;

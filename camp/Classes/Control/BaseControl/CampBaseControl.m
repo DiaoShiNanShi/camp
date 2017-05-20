@@ -26,8 +26,11 @@
 
 - (void)updateLanguage{
 }
-
+- (void)comblack:(UIButton *)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     NSLog(@"_____________成功释放：%@",NSStringFromClass([self class]));
 }
 

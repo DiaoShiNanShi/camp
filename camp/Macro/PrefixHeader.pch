@@ -20,6 +20,7 @@
 #import "SDCycleScrollView.h"
 #import "IQKeyboardManager.h"
 #import "CampBaseNavigationController.h"
+#import "UITableView+FDTemplateLayoutCell.h"
 
 /* 宏 */
 #import "api_Url.h"

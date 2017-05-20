@@ -10,6 +10,7 @@
 #import "CustomGroupView.h"
 #import "sportsGameCell.h"
 #import "Js_DiskInfoControl.h"
+#import "Bz_DiskInfoControl.h"
 
 @interface LotteryControl ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -55,18 +56,24 @@
         
         /* customView 点击回调 */
         __weak typeof(self) weakSelf = self;
-        _customView.PushToJsPage = ^(NSInteger pageId) {
-            /* 保存盘面ID */
-            [persistenceData setValue:@(pageId) forKey:PD_DiskID];
+        _customView.PushToJsPage = ^(typesModel *entity) {
+            /* 保存彩种ID */
+            [persistenceData setValue:entity.name forKey:PD_SelectName];
+            [persistenceData setValue:@(entity.id) forKey:PD_DiskID];
             [persistenceData synchronize];
             
             Js_DiskInfoControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:@"Js_DiskInfoControlID"];
             [Vc setHidesBottomBarWhenPushed:YES];
             [weakSelf.navigationController pushViewController:Vc animated:YES];
         };
-        _customView.PushToBzPage = ^(NSInteger pageId) {
-            [persistenceData setValue:@(pageId) forKey:PD_DiskID];
-            NSLog(@"");
+        _customView.PushToBzPage = ^(typesModel *entity) {
+            [persistenceData setValue:entity.name forKey:PD_SelectName];
+            [persistenceData setValue:@(entity.id) forKey:PD_DiskID];
+            [persistenceData synchronize];
+            
+            Bz_DiskInfoControl *Vc = [KMainStoryboard instantiateViewControllerWithIdentifier:@"Bz_DiskInfoControlID"];
+            [Vc setHidesBottomBarWhenPushed:YES];
+            [weakSelf.navigationController pushViewController:Vc animated:YES];
         };
         
         return cell;

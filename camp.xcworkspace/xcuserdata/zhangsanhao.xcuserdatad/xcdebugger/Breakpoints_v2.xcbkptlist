@@ -45,13 +45,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "camp/Classes/Control/Lottery/&#x8be6;&#x7ec6;&#x73a9;&#x6cd5;&#x4fe1;&#x606f;/Js_DiskInfoControl.m"
-            timestampString = "516708147.85793"
+            filePath = "camp/Classes/View/Lottery/&#x8be6;&#x7ec6;&#x73a9;&#x6cd5;&#x4fe1;&#x606f;/betVerifyFormViewCell.m"
+            timestampString = "516794549.836357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
-            landmarkName = "-textField:shouldChangeCharactersInRange:replacementString:"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-setIntroductionText"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -61,13 +61,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "camp/Classes/Control/Lottery/&#x8be6;&#x7ec6;&#x73a9;&#x6cd5;&#x4fe1;&#x606f;/Js_DiskInfoControl.m"
-            timestampString = "516708153.674215"
+            filePath = "camp/Classes/Control/MyAccount/MyAccountControl.m"
+            timestampString = "516963290.63424"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
-            landmarkName = "-textField:shouldChangeCharactersInRange:replacementString:"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

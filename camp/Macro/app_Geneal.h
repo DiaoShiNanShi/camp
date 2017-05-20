@@ -26,6 +26,11 @@
 #define KColumn                                                                              7
 #define KNumberCellHeight                                                           (kScreenWidth - (15 + 8 + 50 + 8 + 15 + 60)) / KColumn
 
+#define KBZColumn                                                                              4
+#define KBZNumberCellHeight                                                           kScreenWidth / KBZColumn
+
+#define KOpenAwardHeight                                                                150
+
 /* 电子游戏界面Collection的宽高 */
 #define KGameCollectionCell_MG_Width                                 (kScreenWidth - 50) / 4
 #define KGameCollectionCell_PT_Width                                   (kScreenWidth - 40) / 3
@@ -50,6 +55,7 @@
 #define PD_DataBaseModel                @"pd_DataBaseModel"
 #define PD_Version                              @"pd_Version"
 #define PD_Items_id                             @"pd_Items_id"
+#define PD_SelectName                        @"pd_SelectName"
 
 /* 当前盘面ID */
 #define PD_DiskID                               @"pd_diskID"

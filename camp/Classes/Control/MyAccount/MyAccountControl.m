@@ -96,6 +96,10 @@
     [cell.titleName setText:indexPath.section == 0 ? menuArray1[indexPath.row - 1] : menuArray2[indexPath.row]];
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"");
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
